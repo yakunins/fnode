@@ -308,10 +308,8 @@ function loadHistory(): { label: string; groups: Map<string, Map<string, number>
   return points;
 }
 
-function generateBenchReport() {
-  const raw = readFileSync(join(reportsDir, "bench-latest.json"), "utf-8");
+function parseBenchData(raw: string): BenchGroup[] {
   const data = JSON.parse(raw);
-
   const allGroups: BenchGroup[] = [];
   for (const file of data.files ?? []) {
     for (const g of file.groups ?? []) {
@@ -333,6 +331,63 @@ function generateBenchReport() {
       });
     }
   }
+  return allGroups;
+}
+
+function fmtDurMd(ms: number): string {
+  if (ms < 0.001) return `${(ms * 1_000_000).toFixed(0)} ns`;
+  if (ms < 1) return `${(ms * 1000).toFixed(ms * 1000 < 10 ? 1 : 0)} μs`;
+  if (ms < 1000) return `${ms.toFixed(1)} ms`;
+  return `${(ms / 1000).toFixed(2)} s`;
+}
+
+function fmtNum(n: number): string {
+  return n.toLocaleString("en-US");
+}
+
+function generateBenchMarkdown(allGroups: BenchGroup[]) {
+  const totalBenchmarks = allGroups.reduce((s, g) => s + g.benchmarks.length, 0);
+  const date = new Date().toISOString().slice(0, 10);
+
+  const lines: string[] = [];
+  const ln = (s = "") => lines.push(s);
+
+  ln(`# FNode — Benchmark Report`);
+  ln();
+  ln(`**Runtime**: Bun on ${process.platform} (${process.arch})`);
+  ln(`**Benchmark tool**: Vitest bench (Tinybench)`);
+  ln(`**Groups**: ${allGroups.length} | **Benchmarks**: ${totalBenchmarks}`);
+  ln(`**Generated**: ${date}`);
+  ln();
+  ln(`---`);
+
+  for (const group of allGroups) {
+    const shortName = group.fullName.split(" > ").pop() ?? group.fullName;
+    ln();
+    ln(`## ${shortName}`);
+    ln();
+    ln(`| Name | ops/sec | Latency (mean) | Median | p99 | Samples |`);
+    ln(`|---|---:|---:|---:|---:|---:|`);
+
+    const sorted = [...group.benchmarks].sort((a, b) => b.hz - a.hz);
+    for (const b of sorted) {
+      ln(`| ${b.name} | ${fmtNum(Math.round(b.hz))} | ${fmtDurMd(b.mean)} | ${fmtDurMd(b.p75)} | ${fmtDurMd(b.p99)} | ${fmtNum(b.sampleCount)} |`);
+    }
+  }
+
+  ln();
+  ln(`---`);
+  ln();
+  ln(`*Generated ${new Date().toISOString()}*`);
+
+  const md = lines.join("\n");
+  writeFileSync(join(reportsDir, "bench-report.md"), md);
+  console.log("✓ Generated .reports/bench-report.md");
+}
+
+function generateBenchReport() {
+  const raw = readFileSync(join(reportsDir, "bench-latest.json"), "utf-8");
+  const allGroups = parseBenchData(raw);
 
   const history = loadHistory();
 
@@ -379,6 +434,8 @@ function generateBenchReport() {
   const out = html("FNode — Benchmark Report", body);
   writeFileSync(join(reportsDir, "bench-report.html"), out);
   console.log("✓ Generated .reports/bench-report.html");
+
+  generateBenchMarkdown(allGroups);
 }
 
 // ── Main ───────────────────────────────────────────────────────

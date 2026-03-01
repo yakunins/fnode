@@ -43,7 +43,7 @@
       <div class="stat"><div class="label">Failed</div><div class="value fail">0</div></div>
       <div class="stat"><div class="label">Pending</div><div class="value pend">5</div></div>
       <div class="stat"><div class="label">Total</div><div class="value">266</div></div>
-      <div class="stat"><div class="label">Duration</div><div class="value">4.91s</div></div>
+      <div class="stat"><div class="label">Duration</div><div class="value">4.86s</div></div>
       <div class="stat"><div class="label">Suites</div><div class="value">81</div></div>
     </div>
     <div class="bar">
@@ -54,210 +54,210 @@
       <summary>
         <span class="badge passed">passed</span>
         auth/__tests__/auth.test.ts
-        <span class="dur">6.4ms</span>
+        <span class="dur">7.5ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>creates session with given id</td>
-        <td class="dur">705µs</td>
-      </tr><tr>
-        <td><span class="badge passed">passed</span></td>
-        <td>creates session with random UUID</td>
-        <td class="dur">1.6ms</td>
-      </tr><tr>
-        <td><span class="badge passed">passed</span></td>
-        <td>toString includes id</td>
-        <td class="dur">110µs</td>
-      </tr><tr>
-        <td><span class="badge passed">passed</span></td>
-        <td>returns undefined for unknown session</td>
-        <td class="dur">1.3ms</td>
-      </tr><tr>
-        <td><span class="badge passed">passed</span></td>
-        <td>signIn stores user and session</td>
         <td class="dur">745µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
+        <td>creates session with random UUID</td>
+        <td class="dur">1.7ms</td>
+      </tr><tr>
+        <td><span class="badge passed">passed</span></td>
+        <td>toString includes id</td>
+        <td class="dur">116µs</td>
+      </tr><tr>
+        <td><span class="badge passed">passed</span></td>
+        <td>returns undefined for unknown session</td>
+        <td class="dur">1.4ms</td>
+      </tr><tr>
+        <td><span class="badge passed">passed</span></td>
+        <td>signIn stores user and session</td>
+        <td class="dur">589µs</td>
+      </tr><tr>
+        <td><span class="badge passed">passed</span></td>
         <td>signOut removes user and session</td>
-        <td class="dur">814µs</td>
+        <td class="dur">1.1ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>getUser is @computed — returns cached value</td>
-        <td class="dur">266µs</td>
+        <td class="dur">368µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>signIn invalidates cached getUser</td>
-        <td class="dur">341µs</td>
+        <td class="dur">454µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>supports multiple sessions</td>
-        <td class="dur">392µs</td>
+        <td class="dur">549µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         commandr/__tests__/command-context.test.ts
-        <span class="dur">21.2ms</span>
+        <span class="dur">17.2ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>is undefined outside of a command</td>
-        <td class="dur">743µs</td>
+        <td class="dur">813µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>provides ambient access within run()</td>
-        <td class="dur">627µs</td>
+        <td class="dur">601µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>propagates through async chains</td>
-        <td class="dur">19.1ms</td>
+        <td class="dur">14.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>supports nesting with outerContext link</td>
-        <td class="dur">709µs</td>
+        <td class="dur">556µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>shares items bag with nested contexts</td>
-        <td class="dur">190µs</td>
+        <td class="dur">206µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         commandr/__tests__/command-handler.test.ts
-        <span class="dur">2.9ms</span>
+        <span class="dur">3.7ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>attaches handler metadata via COMMAND_HANDLER symbol</td>
-        <td class="dur">1.5ms</td>
+        <td class="dur">1.9ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handler fn is bound to the service instance</td>
-        <td class="dur">200µs</td>
+        <td class="dur">246µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>stores target reference to service instance</td>
-        <td class="dur">102µs</td>
+        <td class="dur">106µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>supports multiple handlers on one service</td>
-        <td class="dur">549µs</td>
+        <td class="dur">565µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>preserves priority from decorator argument</td>
-        <td class="dur">127µs</td>
+        <td class="dur">125µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>different instances have independent handler metadata</td>
-        <td class="dur">854µs</td>
+        <td class="dur">683µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         commandr/__tests__/commander.test.ts
-        <span class="dur">6.2ms</span>
+        <span class="dur">7.2ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>resolves and executes a handler</td>
-        <td class="dur">1.7ms</td>
+        <td class="dur">2.1ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>returns typed result from handler</td>
-        <td class="dur">310µs</td>
+        <td class="dur">342µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>throws for unknown command type</td>
-        <td class="dur">971µs</td>
+        <td class="dur">1.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>supports addHandler() for inline handler registration</td>
-        <td class="dur">386µs</td>
+        <td class="dur">546µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>addService() scans all @commandHandler methods</td>
-        <td class="dur">364µs</td>
+        <td class="dur">594µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>sets CommandContext.current during handler execution</td>
-        <td class="dur">250µs</td>
+        <td class="dur">269µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>middleware filters execute in priority order (descending)</td>
-        <td class="dur">771µs</td>
+        <td class="dur">633µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>nested commands create linked contexts</td>
-        <td class="dur">511µs</td>
+        <td class="dur">420µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>nested commands share items bag</td>
-        <td class="dur">497µs</td>
+        <td class="dur">460µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>addService with no handlers does not throw</td>
-        <td class="dur">225µs</td>
+        <td class="dur">233µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         commandr/__tests__/invalidation.test.ts
-        <span class="dur">94.4ms</span>
+        <span class="dur">99.9ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>automatically invalidates @computed after command</td>
-        <td class="dur">2.8ms</td>
+        <td class="dur">2.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>Invalidation.isActive is true during invalidation phase</td>
-        <td class="dur">393µs</td>
+        <td class="dur">401µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>invalidates multiple keys in one command</td>
-        <td class="dur">722µs</td>
+        <td class="dur">689µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>transitive invalidation cascades through dependency graph</td>
-        <td class="dur">719µs</td>
+        <td class="dur">752µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>works with capture() for reactive observation</td>
-        <td class="dur">444µs</td>
+        <td class="dur">647µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>works with ComputedState for auto-updating loop</td>
-        <td class="dur">88.6ms</td>
+        <td class="dur">93.9ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>cart service: add items and auto-invalidate</td>
-        <td class="dur">1.0ms</td>
+        <td class="dur">893µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>command without invalidation branch still executes</td>
-        <td class="dur">416µs</td>
+        <td class="dur">335µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         core/__tests__/async-lock-set.test.ts
-        <span class="dur">319.2ms</span>
+        <span class="dur">339.2ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>different keys do not block each other</td>
-        <td class="dur">54.6ms</td>
+        <td class="dur">58.0ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>same key serializes access</td>
-        <td class="dur">45.9ms</td>
+        <td class="dur">45.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>cleans up entries when no longer in use</td>
-        <td class="dur">382µs</td>
+        <td class="dur">457µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>concurrent workers on same key: counter is serialized</td>
-        <td class="dur">153.6ms</td>
+        <td class="dur">152.1ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>mixed concurrent keys: different keys run in parallel, same keys serialize</td>
-        <td class="dur">63.0ms</td>
+        <td class="dur">81.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>abort cancels waiting for keyed lock</td>
@@ -266,534 +266,534 @@
       <summary>
         <span class="badge passed">passed</span>
         core/__tests__/async-lock.test.ts
-        <span class="dur">287.4ms</span>
+        <span class="dur">278.5ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>allows sequential access</td>
-        <td class="dur">1.3ms</td>
+        <td class="dur">1.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>serializes concurrent access</td>
-        <td class="dur">68.0ms</td>
+        <td class="dur">71.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>reports locked state</td>
-        <td class="dur">275µs</td>
+        <td class="dur">368µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>double dispose is safe</td>
-        <td class="dur">224µs</td>
+        <td class="dur">322µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>concurrent workers: shared counter is serialized</td>
-        <td class="dur">154.3ms</td>
+        <td class="dur">152.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>abort cancels waiting for lock</td>
-        <td class="dur">1.4ms</td>
+        <td class="dur">1.5ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>FIFO ordering of waiters</td>
-        <td class="dur">240µs</td>
+        <td class="dur">255µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>lock held across await points</td>
-        <td class="dur">60.6ms</td>
+        <td class="dur">50.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>stress: 50 concurrent lock attempts all resolve</td>
-        <td class="dur">445µs</td>
+        <td class="dur">458µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         core/__tests__/computed-input.test.ts
-        <span class="dur">3.7ms</span>
+        <span class="dur">4.1ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>same service + method + args produce equal keys</td>
-        <td class="dur">1.0ms</td>
+        <td class="dur">951µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>different args produce different keys</td>
-        <td class="dur">210µs</td>
+        <td class="dur">172µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>different methods produce different keys</td>
-        <td class="dur">114µs</td>
+        <td class="dur">113µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>different services produce different keys</td>
-        <td class="dur">238µs</td>
+        <td class="dur">320µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>same service instance gets same id across calls</td>
-        <td class="dur">178µs</td>
+        <td class="dur">174µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles object args with stable key (sorted keys)</td>
-        <td class="dur">154µs</td>
+        <td class="dur">172µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles no args</td>
-        <td class="dur">173µs</td>
+        <td class="dur">200µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles null and undefined args</td>
-        <td class="dur">249µs</td>
+        <td class="dur">316µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles number, boolean, bigint args</td>
-        <td class="dur">298µs</td>
+        <td class="dur">454µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>array args produce stable keys (order matters)</td>
-        <td class="dur">713µs</td>
+        <td class="dur">856µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>nested object args produce stable keys (deep sorted)</td>
-        <td class="dur">109µs</td>
+        <td class="dur">144µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         core/__tests__/events.test.ts
-        <span class="dur">3.9ms</span>
+        <span class="dur">5.0ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires to subscribers</td>
-        <td class="dur">1.1ms</td>
+        <td class="dur">1.5ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>unsubscribes via dispose</td>
-        <td class="dur">323µs</td>
+        <td class="dur">344µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>once fires only once</td>
-        <td class="dur">219µs</td>
+        <td class="dur">193µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>next() returns promise for next fire</td>
-        <td class="dur">447µs</td>
+        <td class="dur">391µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>hasHandlers reflects subscription state</td>
-        <td class="dur">164µs</td>
+        <td class="dur">227µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>clear removes all handlers</td>
-        <td class="dur">283µs</td>
+        <td class="dur">230µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>multiple subscribers all receive same event</td>
-        <td class="dur">377µs</td>
+        <td class="dur">339µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>unsubscribe during fire does not break iteration</td>
-        <td class="dur">891µs</td>
+        <td class="dur">1.0ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         core/__tests__/result.test.ts
-        <span class="dur">4.2ms</span>
+        <span class="dur">4.3ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>ok: holds value</td>
-        <td class="dur">1.1ms</td>
+        <td class="dur">1.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>err: holds error</td>
-        <td class="dur">244µs</td>
+        <td class="dur">232µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>err: accessing .value throws</td>
-        <td class="dur">608µs</td>
+        <td class="dur">563µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>from: captures success</td>
-        <td class="dur">253µs</td>
+        <td class="dur">333µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>from: captures error</td>
-        <td class="dur">133µs</td>
+        <td class="dur">183µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fromAsync: captures async success</td>
-        <td class="dur">137µs</td>
+        <td class="dur">140µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fromAsync: captures async error</td>
-        <td class="dur">279µs</td>
+        <td class="dur">278µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>from: wraps non-Error throws</td>
-        <td class="dur">168µs</td>
+        <td class="dur">171µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>from: wraps non-Error thrown values (number, object, symbol)</td>
-        <td class="dur">393µs</td>
+        <td class="dur">409µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>err: accessing .value re-throws the exact same error instance</td>
-        <td class="dur">127µs</td>
+        <td class="dur">128µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>ok: stores falsy values correctly (0, empty string, false, null, undefined)</td>
-        <td class="dur">186µs</td>
+        <td class="dur">313µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         core/__tests__/version-generator.test.ts
-        <span class="dur">1.3ms</span>
+        <span class="dur">2.2ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>starts at 0</td>
-        <td class="dur">725µs</td>
+        <td class="dur">970µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>returns strictly increasing values</td>
-        <td class="dur">260µs</td>
+        <td class="dur">276µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>independent generators are independent</td>
-        <td class="dur">110µs</td>
+        <td class="dur">167µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         fusion/__tests__/capture.test.ts
-        <span class="dur">7.3ms</span>
+        <span class="dur">9.2ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>captures a computed and its value</td>
-        <td class="dur">2.9ms</td>
+        <td class="dur">3.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>whenInvalidated() resolves on invalidation</td>
-        <td class="dur">534µs</td>
+        <td class="dur">984µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>update() returns fresh computed after invalidation</td>
-        <td class="dur">1.0ms</td>
+        <td class="dur">1.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>captures cross-service dependency (watch total)</td>
-        <td class="dur">992µs</td>
-      </tr><tr>
-        <td><span class="badge passed">passed</span></td>
-        <td>throws if no @computed method called inside</td>
         <td class="dur">1.2ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
+        <td>throws if no @computed method called inside</td>
+        <td class="dur">1.4ms</td>
+      </tr><tr>
+        <td><span class="badge passed">passed</span></td>
         <td>resolves immediately if already invalidated</td>
-        <td class="dur">259µs</td>
+        <td class="dur">245µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>resolves when invalidated later</td>
-        <td class="dur">129µs</td>
+        <td class="dur">115µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         fusion/__tests__/compute-context.test.ts
-        <span class="dur">131.4ms</span>
+        <span class="dur">114.2ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>current is undefined outside any context</td>
-        <td class="dur">884µs</td>
+        <td class="dur">1.0ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>run sets the current context</td>
-        <td class="dur">741µs</td>
+        <td class="dur">707µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>context is restored after run</td>
-        <td class="dur">196µs</td>
+        <td class="dur">145µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>propagates through async calls</td>
-        <td class="dur">22.0ms</td>
+        <td class="dur">18.8ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>nested contexts work correctly</td>
-        <td class="dur">486µs</td>
+        <td class="dur">572µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>isActive is false outside scope</td>
-        <td class="dur">300µs</td>
+        <td class="dur">218µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>isActive is true inside begin() scope</td>
-        <td class="dur">352µs</td>
+        <td class="dur">421µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>isActive restored after scope ends</td>
-        <td class="dur">216µs</td>
+        <td class="dur">303µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>AsyncLocalStorage isolation: two concurrent computations have independent contexts</td>
-        <td class="dur">29.5ms</td>
+        <td class="dur">29.0ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>context not leaked on error: if computation throws, context is restored</td>
-        <td class="dur">577µs</td>
+        <td class="dur">598µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>deep async chain: context propagates through 5+ levels</td>
-        <td class="dur">75.4ms</td>
+        <td class="dur">61.2ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         fusion/__tests__/computed-decorator.test.ts
-        <span class="dur">163.2ms</span>
+        <span class="dur">149.2ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>caches results on second call</td>
-        <td class="dur">2.4ms</td>
+        <td class="dur">2.9ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>different args are cached separately</td>
-        <td class="dur">405µs</td>
+        <td class="dur">471µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>recomputes after invalidation</td>
-        <td class="dur">584µs</td>
+        <td class="dur">656µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>tracks dependencies: child invalidation → parent recomputes</td>
-        <td class="dur">823µs</td>
+        <td class="dur">1.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles multiple dependencies</td>
-        <td class="dur">481µs</td>
+        <td class="dur">693µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles errors in computed methods</td>
-        <td class="dur">1.2ms</td>
+        <td class="dur">1.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>invalidation in scope does not execute method</td>
-        <td class="dur">257µs</td>
+        <td class="dur">380µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>same call from two concurrent callers returns same value (deduplication)</td>
-        <td class="dur">63.0ms</td>
+        <td class="dur">57.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>error in @computed method: captured, subsequent call retries</td>
-        <td class="dur">600µs</td>
+        <td class="dur">720µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>invalidation + immediate re-call: verify fresh value</td>
-        <td class="dur">284µs</td>
+        <td class="dur">276µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>cancellation via AbortSignal does not break cache</td>
-        <td class="dur">204µs</td>
+        <td class="dur">203µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>auto-recompute via ComputedState wrapping @computed method</td>
-        <td class="dur">92.1ms</td>
+        <td class="dur">81.1ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>registers computed in global registry</td>
-        <td class="dur">184µs</td>
+        <td class="dur">229µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>unregisters on invalidation</td>
-        <td class="dur">203µs</td>
+        <td class="dur">233µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         fusion/__tests__/computed-registry.test.ts
-        <span class="dur">4.2ms</span>
+        <span class="dur">5.5ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>register and get</td>
-        <td class="dur">1.1ms</td>
+        <td class="dur">1.5ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>get returns undefined for missing key</td>
-        <td class="dur">216µs</td>
+        <td class="dur">274µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>get returns undefined for invalidated entry</td>
-        <td class="dur">183µs</td>
+        <td class="dur">275µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>register invalidates previous version</td>
-        <td class="dur">374µs</td>
+        <td class="dur">398µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>unregister removes entry</td>
-        <td class="dur">231µs</td>
+        <td class="dur">225µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>unregister does not remove newer version</td>
-        <td class="dur">208µs</td>
+        <td class="dur">192µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>tracks size</td>
-        <td class="dur">229µs</td>
+        <td class="dur">266µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>rapid register+get cycles do not lose entries</td>
-        <td class="dur">1.4ms</td>
+        <td class="dur">1.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>clear removes all entries</td>
-        <td class="dur">230µs</td>
+        <td class="dur">484µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         fusion/__tests__/computed-state.test.ts
-        <span class="dur">389.9ms</span>
+        <span class="dur">393.8ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>computes initial value</td>
-        <td class="dur">24.9ms</td>
+        <td class="dur">21.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>auto-updates after invalidation</td>
-        <td class="dur">29.3ms</td>
+        <td class="dur">29.2ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires onUpdated after recomputation</td>
-        <td class="dur">16.0ms</td>
+        <td class="dur">15.1ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires onInvalidated when computed invalidates</td>
-        <td class="dur">15.2ms</td>
+        <td class="dur">15.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires onUpdating before recomputation</td>
-        <td class="dur">15.7ms</td>
+        <td class="dur">15.2ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles errors and tracks retryCount</td>
-        <td class="dur">46.2ms</td>
+        <td class="dur">52.0ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>preserves lastNonErrorComputed on error</td>
-        <td class="dur">31.9ms</td>
+        <td class="dur">44.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>respects updateDelayer</td>
-        <td class="dur">101.5ms</td>
+        <td class="dur">107.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>disposal stops the update loop</td>
-        <td class="dur">58.8ms</td>
+        <td class="dur">47.1ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>tracks dependencies on @computed methods</td>
-        <td class="dur">49.9ms</td>
+        <td class="dur">45.8ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         fusion/__tests__/computed.test.ts
-        <span class="dur">281.1ms</span>
+        <span class="dur">269.2ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>starts in Computing state</td>
-        <td class="dur">1.2ms</td>
+        <td class="dur">1.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>transitions to Consistent on trySetOutput</td>
-        <td class="dur">416µs</td>
+        <td class="dur">330µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>trySetOutput fails if not Computing</td>
-        <td class="dur">146µs</td>
+        <td class="dur">194µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>transitions to Invalidated on invalidate</td>
-        <td class="dur">376µs</td>
+        <td class="dur">440µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>invalidate is idempotent</td>
-        <td class="dur">144µs</td>
+        <td class="dur">188µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires onInvalidated event</td>
-        <td class="dur">192µs</td>
+        <td class="dur">246µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>defers invalidation during Computing</td>
-        <td class="dur">143µs</td>
+        <td class="dur">166µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>stores error results</td>
-        <td class="dur">600µs</td>
+        <td class="dur">838µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>throws when accessing value during Computing</td>
-        <td class="dur">273µs</td>
+        <td class="dur">407µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>tracks dependencies</td>
-        <td class="dur">204µs</td>
+        <td class="dur">264µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>transitive invalidation: child → parent</td>
-        <td class="dur">177µs</td>
+        <td class="dur">183µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>transitive invalidation: A → B → C</td>
-        <td class="dur">133µs</td>
+        <td class="dur">166µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fan-out invalidation: one dependency, multiple dependants</td>
-        <td class="dur">230µs</td>
+        <td class="dur">329µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>invalidating an already-invalid dependency invalidates new dependant immediately</td>
-        <td class="dur">131µs</td>
+        <td class="dur">199µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>does not add dependency if parent is not Computing</td>
-        <td class="dur">250µs</td>
+        <td class="dur">147µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>cleans up dependency links on invalidation</td>
-        <td class="dur">118µs</td>
+        <td class="dur">147µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>auto-invalidation timer fires after configured delay</td>
-        <td class="dur">110.6ms</td>
+        <td class="dur">105.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>auto-invalidation timer cancelled on manual invalidation</td>
-        <td class="dur">164.7ms</td>
+        <td class="dur">157.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>deep dependency chain (10 levels) cascades invalidation</td>
-        <td class="dur">249µs</td>
+        <td class="dur">246µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>diamond dependency: A depends on B and C, both depend on D — A invalidated once</td>
-        <td class="dur">134µs</td>
+        <td class="dur">122µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         fusion/__tests__/concurrency.test.ts
-        <span class="dur">528.2ms</span>
+        <span class="dur">520.3ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>MutableState concurrent updates: converges to final value</td>
-        <td class="dur">133.0ms</td>
+        <td class="dur">135.0ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>multiple ComputedStates watching same MutableState converge</td>
-        <td class="dur">116.9ms</td>
+        <td class="dur">119.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>concurrent capture of same @computed method returns same value</td>
@@ -801,469 +801,469 @@
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fan-out stress: 1 MutableState, 20 ComputedStates — all see final value</td>
-        <td class="dur">246.2ms</td>
+        <td class="dur">233.3ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         fusion/__tests__/mutable-state.test.ts
-        <span class="dur">56.2ms</span>
+        <span class="dur">52.2ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>holds initial value</td>
-        <td class="dur">1.3ms</td>
+        <td class="dur">2.0ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>set(value) triggers immediate recompute</td>
-        <td class="dur">652µs</td>
+        <td class="dur">829µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>set(Result) works</td>
-        <td class="dur">380µs</td>
+        <td class="dur">347µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>set(updater) pattern</td>
-        <td class="dur">407µs</td>
+        <td class="dur">359µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires onInvalidated on set</td>
-        <td class="dur">344µs</td>
+        <td class="dur">332µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires onUpdating and onUpdated on set</td>
-        <td class="dur">562µs</td>
+        <td class="dur">685µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>tracks error state</td>
-        <td class="dur">358µs</td>
+        <td class="dur">777µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>preserves lastNonErrorComputed on error</td>
-        <td class="dur">159µs</td>
+        <td class="dur">298µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>resets retryCount on success after error</td>
-        <td class="dur">581µs</td>
+        <td class="dur">498µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>dependants recompute when mutable state changes</td>
-        <td class="dur">49.8ms</td>
+        <td class="dur">44.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>multiple rapid sets only keep last value</td>
-        <td class="dur">243µs</td>
+        <td class="dur">201µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>dispose invalidates current computed</td>
-        <td class="dur">184µs</td>
+        <td class="dur">134µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>set after dispose still works (no crash)</td>
-        <td class="dur">602µs</td>
+        <td class="dur">566µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>set same value still triggers invalidation (no skip-if-equal)</td>
-        <td class="dur">159µs</td>
+        <td class="dur">163µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         fusion/__tests__/update-delayer.test.ts
-        <span class="dur">55.2ms</span>
+        <span class="dur">64.3ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>resolves immediately</td>
-        <td class="dur">836µs</td>
+        <td class="dur">917µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>resolves immediately regardless of retryCount</td>
-        <td class="dur">75µs</td>
+        <td class="dur">93µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>resolves after yielding to event loop</td>
-        <td class="dur">96µs</td>
+        <td class="dur">151µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>respects AbortSignal cancellation</td>
-        <td class="dur">1.1ms</td>
+        <td class="dur">1.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>delays for the specified duration</td>
-        <td class="dur">51.5ms</td>
+        <td class="dur">60.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>respects AbortSignal cancellation</td>
-        <td class="dur">421µs</td>
+        <td class="dur">654µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>rejects immediately if signal already aborted</td>
-        <td class="dur">214µs</td>
+        <td class="dur">293µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         react/__tests__/use-computed-state.test.tsx
-        <span class="dur">644.8ms</span>
+        <span class="dur">647.1ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>starts with isUpdating=true, then resolves</td>
-        <td class="dur">71.2ms</td>
+        <td class="dur">78.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>exposes error on computation failure</td>
-        <td class="dur">55.3ms</td>
+        <td class="dur">61.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>re-renders on invalidation with updated value</td>
-        <td class="dur">128.8ms</td>
+        <td class="dur">118.1ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>transitions through isUpdating on re-computation</td>
-        <td class="dur">93.5ms</td>
+        <td class="dur">96.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>cleans up on unmount</td>
-        <td class="dur">171.2ms</td>
+        <td class="dur">172.5ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles error then recovery</td>
-        <td class="dur">124.8ms</td>
+        <td class="dur">120.1ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         react/__tests__/use-computed.test.tsx
-        <span class="dur">724.5ms</span>
+        <span class="dur">712.3ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>renders initial undefined then resolved value</td>
-        <td class="dur">70.8ms</td>
+        <td class="dur">62.1ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>renders initialValue before computation completes</td>
-        <td class="dur">169.1ms</td>
+        <td class="dur">164.8ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>re-renders on invalidation</td>
-        <td class="dur">123.4ms</td>
+        <td class="dur">127.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>cleans up on unmount (no leak)</td>
-        <td class="dur">172.0ms</td>
+        <td class="dur">173.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>does not render error values (keeps last good value)</td>
-        <td class="dur">125.4ms</td>
+        <td class="dur">119.9ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>returns string values correctly</td>
-        <td class="dur">63.5ms</td>
+        <td class="dur">64.3ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         react/__tests__/use-mutable-state.test.tsx
-        <span class="dur">207.0ms</span>
+        <span class="dur">211.8ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>renders initial value</td>
-        <td class="dur">12.0ms</td>
+        <td class="dur">12.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>updates on setter call</td>
-        <td class="dur">6.3ms</td>
+        <td class="dur">6.8ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>supports multiple updates</td>
-        <td class="dur">3.6ms</td>
+        <td class="dur">3.8ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>setter sets exact value</td>
-        <td class="dur">1.7ms</td>
+        <td class="dur">1.9ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>cleans up on unmount</td>
-        <td class="dur">60.1ms</td>
+        <td class="dur">66.5ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>works with string values</td>
-        <td class="dur">1.5ms</td>
+        <td class="dur">2.0ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>integrates with computed dependency graph</td>
-        <td class="dur">122.0ms</td>
+        <td class="dur">117.8ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         rpc/__tests__/edge-cases.test.ts
-        <span class="dur">133.8ms</span>
+        <span class="dur">149.6ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>server deduplicates concurrent re-fetches for the same input</td>
-        <td class="dur">71.1ms</td>
+        <td class="dur">75.5ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>mutation inside onInvalidated produces consistent snapshot on recompute</td>
-        <td class="dur">725µs</td>
+        <td class="dur">729µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>chained invalidation with intermediate mutation is consistent</td>
-        <td class="dur">557µs</td>
+        <td class="dur">568µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles registry clear without crash when server sends invalidation</td>
-        <td class="dur">12.8ms</td>
+        <td class="dur">12.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fresh RPC call works after registry clear</td>
-        <td class="dur">16.1ms</td>
+        <td class="dur">30.0ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>multiple registry clears during active session are safe</td>
-        <td class="dur">31.8ms</td>
+        <td class="dur">29.6ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         rpc/__tests__/invalidation-push.test.ts
-        <span class="dur">39.7ms</span>
+        <span class="dur">37.6ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>compute call returns result via proxy</td>
-        <td class="dur">3.0ms</td>
+        <td class="dur">2.9ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>server invalidation reaches client</td>
-        <td class="dur">21.5ms</td>
+        <td class="dur">19.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>cached compute call is served from registry</td>
-        <td class="dur">646µs</td>
+        <td class="dur">718µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>different args are cached separately</td>
-        <td class="dur">755µs</td>
+        <td class="dur">864µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>invalidation only affects the invalidated key</td>
-        <td class="dur">13.7ms</td>
+        <td class="dur">13.6ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         rpc/__tests__/peer.test.ts
-        <span class="dur">4.3ms</span>
+        <span class="dur">5.2ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>makes a regular call and receives result</td>
-        <td class="dur">1.5ms</td>
+        <td class="dur">1.6ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>propagates errors from server</td>
-        <td class="dur">1.1ms</td>
+        <td class="dur">1.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles unknown method</td>
-        <td class="dur">265µs</td>
-      </tr><tr>
-        <td><span class="badge passed">passed</span></td>
-        <td>handles unknown service</td>
-        <td class="dur">398µs</td>
-      </tr><tr>
-        <td><span class="badge passed">passed</span></td>
-        <td>handles multiple concurrent calls</td>
-        <td class="dur">395µs</td>
-      </tr><tr>
-        <td><span class="badge passed">passed</span></td>
-        <td>rejects pending calls on disconnect</td>
         <td class="dur">254µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
+        <td>handles unknown service</td>
+        <td class="dur">418µs</td>
+      </tr><tr>
+        <td><span class="badge passed">passed</span></td>
+        <td>handles multiple concurrent calls</td>
+        <td class="dur">379µs</td>
+      </tr><tr>
+        <td><span class="badge passed">passed</span></td>
+        <td>rejects pending calls on disconnect</td>
+        <td class="dur">213µs</td>
+      </tr><tr>
+        <td><span class="badge passed">passed</span></td>
         <td>fires onClose event when transport closes</td>
-        <td class="dur">185µs</td>
+        <td class="dur">200µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles no dispatcher gracefully</td>
-        <td class="dur">271µs</td>
+        <td class="dur">213µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         rpc/__tests__/protocol.test.ts
-        <span class="dur">3.3ms</span>
+        <span class="dur">4.3ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>has correct numeric values</td>
-        <td class="dur">1.2ms</td>
+        <td class="dur">1.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>round-trips a Call message</td>
-        <td class="dur">585µs</td>
+        <td class="dur">784µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>round-trips a ComputeCall message</td>
-        <td class="dur">246µs</td>
+        <td class="dur">276µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>round-trips an Ok message with data</td>
-        <td class="dur">315µs</td>
+        <td class="dur">317µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>round-trips an Error message</td>
-        <td class="dur">153µs</td>
+        <td class="dur">180µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>round-trips an Invalidate message</td>
-        <td class="dur">127µs</td>
+        <td class="dur">137µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>round-trips a Cancel message</td>
-        <td class="dur">169µs</td>
+        <td class="dur">221µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>handles undefined optional fields</td>
-        <td class="dur">183µs</td>
+        <td class="dur">263µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         rpc/__tests__/reconnect.test.ts
-        <span class="dur">640.3ms</span>
+        <span class="dur">594.6ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>forwards messages while connected</td>
-        <td class="dur">1.8ms</td>
+        <td class="dur">1.7ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>sends messages through inner transport</td>
-        <td class="dur">374µs</td>
+        <td class="dur">338µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>reconnects after disconnect</td>
-        <td class="dur">55.8ms</td>
+        <td class="dur">50.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>retries with exponential backoff</td>
-        <td class="dur">223.2ms</td>
+        <td class="dur">204.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>gives up after maxAttempts</td>
-        <td class="dur">218.3ms</td>
+        <td class="dur">202.9ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires onReconnected callback</td>
-        <td class="dur">52.2ms</td>
+        <td class="dur">49.8ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>does not reconnect after manual dispose</td>
-        <td class="dur">56.9ms</td>
+        <td class="dur">52.7ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>throws when sending while reconnecting</td>
-        <td class="dur">31.3ms</td>
+        <td class="dur">32.6ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         rpc/__tests__/remote-computed.test.ts
-        <span class="dur">136.3ms</span>
+        <span class="dur">136.4ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>remote computed participates in capture()</td>
-        <td class="dur">2.9ms</td>
+        <td class="dur">3.0ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>capture detects remote invalidation</td>
-        <td class="dur">830µs</td>
+        <td class="dur">817µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>local @computed depends on remote @computed</td>
-        <td class="dur">951µs</td>
+        <td class="dur">749µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>local @computed invalidates when remote dependency invalidates</td>
-        <td class="dur">990µs</td>
+        <td class="dur">1.0ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>ComputedState auto-updates on remote invalidation</td>
-        <td class="dur">129.2ms</td>
+        <td class="dur">128.9ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>error from remote @computed propagates correctly</td>
-        <td class="dur">1.3ms</td>
+        <td class="dur">1.4ms</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         rpc/__tests__/service-registry.test.ts
-        <span class="dur">2.3ms</span>
+        <span class="dur">4.1ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>registers and resolves a service</td>
-        <td class="dur">1.1ms</td>
+        <td class="dur">1.3ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>resolves methods</td>
-        <td class="dur">282µs</td>
+        <td class="dur">441µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>detects @computed methods</td>
-        <td class="dur">181µs</td>
+        <td class="dur">285µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>detects non-@computed methods</td>
-        <td class="dur">264µs</td>
+        <td class="dur">433µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>returns undefined for unknown service</td>
-        <td class="dur">199µs</td>
+        <td class="dur">273µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>returns undefined for unknown method</td>
-        <td class="dur">96µs</td>
+        <td class="dur">99µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>lists all methods for a service</td>
-        <td class="dur">180µs</td>
+        <td class="dur">257µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>clears all services</td>
-        <td class="dur">110µs</td>
+        <td class="dur">131µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
         rpc/__tests__/transport.test.ts
-        <span class="dur">4.2ms</span>
+        <span class="dur">5.4ms</span>
       </summary>
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>delivers messages from A to B</td>
-        <td class="dur">1.6ms</td>
+        <td class="dur">2.4ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>delivers messages from B to A</td>
-        <td class="dur">286µs</td>
+        <td class="dur">386µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>delivers multiple messages in order</td>
-        <td class="dur">365µs</td>
+        <td class="dur">351µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires onClose when disposed</td>
-        <td class="dur">595µs</td>
+        <td class="dur">597µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>closing one side closes the other</td>
-        <td class="dur">181µs</td>
+        <td class="dur">198µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>throws when sending on closed transport</td>
-        <td class="dur">698µs</td>
+        <td class="dur">803µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>double dispose is safe</td>
-        <td class="dur">235µs</td>
+        <td class="dur">355µs</td>
       </tr></table></div></details><details>
       <summary>
         <span class="badge passed">passed</span>
@@ -1299,19 +1299,19 @@
       <div class="suite-tests"><table><tr>
         <td><span class="badge passed">passed</span></td>
         <td>sends messages via ws.send</td>
-        <td class="dur">1.8ms</td>
+        <td class="dur">1.9ms</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires onMessage when handleMessage is called</td>
-        <td class="dur">400µs</td>
+        <td class="dur">427µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>fires onClose when handleClose is called</td>
-        <td class="dur">251µs</td>
+        <td class="dur">277µs</td>
       </tr><tr>
         <td><span class="badge passed">passed</span></td>
         <td>throws when sending on closed transport</td>
-        <td class="dur">682µs</td>
+        <td class="dur">730µs</td>
       </tr></table></div></details>
-<div class="generated">Generated 2026-03-01T18:34:09.939Z</div>
+<div class="generated">Generated 2026-03-01T18:51:41.907Z</div>
 </body></html>

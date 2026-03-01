@@ -40,541 +40,541 @@
 <body><h1>FNode — Benchmark Report</h1><div class="summary">
     <div class="stat"><div class="label">Groups</div><div class="value">26</div></div>
     <div class="stat"><div class="label">Benchmarks</div><div class="value">72</div></div>
-  </div><h2>Commander pipeline</h2><div class="chart-container"><svg width="800" height="114" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: direct handler call</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.95M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">call() — no invalidation branch</text><rect x="200" y="34" width="112.25653784197425" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="318.25653784197425" y="49" fill="#4db8ff" font-size="12" font-family="monospace">421.84K ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">call() — with invalidation</text><rect x="200" y="64" width="85.90851930155593" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="291.90851930155594" y="79" fill="#f5a623" font-size="12" font-family="monospace">322.83K ops/s</text></svg></div><table>
+  </div><h2>Commander pipeline</h2><div class="chart-container"><svg width="800" height="114" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: direct handler call</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.99M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">call() — no invalidation branch</text><rect x="200" y="34" width="114.07645186824544" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="320.07645186824544" y="49" fill="#4db8ff" font-size="12" font-family="monospace">436.92K ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">call() — with invalidation</text><rect x="200" y="64" width="86.26451489798382" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="292.2645148979838" y="79" fill="#f5a623" font-size="12" font-family="monospace">330.40K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>baseline: direct handler call</td>
-        <td style="color:#16c79a">1.95M</td>
+        <td style="color:#16c79a">1.99M</td>
         <td class="dur">1µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">251µs</td>
+        <td class="dur">2.8ms</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">±0.49%</td>
-        <td>977,036</td>
+        <td class="dur">±1.20%</td>
+        <td>995,813</td>
       </tr><tr>
         <td>call() — no invalidation branch</td>
-        <td style="color:#4db8ff">421.84K</td>
+        <td style="color:#4db8ff">436.92K</td>
         <td class="dur">2µs</td>
         <td class="dur">2µs</td>
-        <td class="dur">3.6ms</td>
+        <td class="dur">3.4ms</td>
         <td class="dur">2µs</td>
         <td class="dur">4µs</td>
-        <td class="dur">34µs</td>
-        <td class="dur">±1.45%</td>
-        <td>210,921</td>
+        <td class="dur">25µs</td>
+        <td class="dur">±1.39%</td>
+        <td>218,460</td>
       </tr><tr>
         <td>call() — with invalidation</td>
-        <td style="color:#f5a623">322.83K</td>
+        <td style="color:#f5a623">330.40K</td>
         <td class="dur">3µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">160µs</td>
+        <td class="dur">216µs</td>
         <td class="dur">3µs</td>
         <td class="dur">5µs</td>
-        <td class="dur">7µs</td>
-        <td class="dur">±0.39%</td>
-        <td>161,415</td>
-      </tr></table><h2>Commander nested commands</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">nested call (2 levels)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">159.37K ops/s</text></svg></div><table>
+        <td class="dur">8µs</td>
+        <td class="dur">±0.45%</td>
+        <td>165,199</td>
+      </tr></table><h2>Commander nested commands</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">nested call (2 levels)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">162.70K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>nested call (2 levels)</td>
-        <td style="color:#16c79a">159.37K</td>
+        <td style="color:#16c79a">162.70K</td>
         <td class="dur">6µs</td>
         <td class="dur">6µs</td>
-        <td class="dur">207µs</td>
+        <td class="dur">228µs</td>
         <td class="dur">6µs</td>
-        <td class="dur">8µs</td>
-        <td class="dur">91µs</td>
-        <td class="dur">±0.48%</td>
-        <td>79,686</td>
-      </tr></table><h2>ComputedInput construction</h2><div class="chart-container"><svg width="800" height="174" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">zero args</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">11.71M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">1 numeric arg</text><rect x="200" y="34" width="462.51741037704244" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="668.5174103770424" y="49" fill="#4db8ff" font-size="12" font-family="monospace">10.41M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">1 string arg</text><rect x="200" y="64" width="282.9762387929845" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="488.9762387929845" y="79" fill="#f5a623" font-size="12" font-family="monospace">6.37M ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">2 mixed args (number + string)</text><rect x="200" y="94" width="184.41844431595354" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="390.41844431595354" y="109" fill="#e94560" font-size="12" font-family="monospace">4.15M ops/s</text><text x="192" y="139" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">1 object arg (sorted-keys JSON)</text><rect x="200" y="124" width="62.586546751569145" height="22" rx="3" fill="#a855f7" opacity="0.85"/><text x="268.58654675156913" y="139" fill="#a855f7" font-size="12" font-family="monospace">1.41M ops/s</text></svg></div><table>
+        <td class="dur">7µs</td>
+        <td class="dur">87µs</td>
+        <td class="dur">±0.47%</td>
+        <td>81,350</td>
+      </tr></table><h2>ComputedInput construction</h2><div class="chart-container"><svg width="800" height="174" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">zero args</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">11.84M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">1 numeric arg</text><rect x="200" y="34" width="464.89341712006166" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="670.8934171200617" y="49" fill="#4db8ff" font-size="12" font-family="monospace">10.59M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">1 string arg</text><rect x="200" y="64" width="288.81284997106565" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="494.81284997106565" y="79" fill="#f5a623" font-size="12" font-family="monospace">6.58M ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">2 mixed args (number + string)</text><rect x="200" y="94" width="181.14469284059845" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="387.14469284059845" y="109" fill="#e94560" font-size="12" font-family="monospace">4.12M ops/s</text><text x="192" y="139" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">1 object arg (sorted-keys JSON)</text><rect x="200" y="124" width="61.84068421239968" height="22" rx="3" fill="#a855f7" opacity="0.85"/><text x="267.84068421239965" y="139" fill="#a855f7" font-size="12" font-family="monospace">1.41M ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>zero args</td>
-        <td style="color:#16c79a">11.71M</td>
+        <td style="color:#16c79a">11.84M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">96µs</td>
+        <td class="dur">153µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">±0.07%</td>
-        <td>5,852,975</td>
+        <td class="dur">±0.10%</td>
+        <td>5,919,951</td>
       </tr><tr>
         <td>1 numeric arg</td>
-        <td style="color:#4db8ff">10.41M</td>
+        <td style="color:#4db8ff">10.59M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">43µs</td>
+        <td class="dur">38µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">±0.06%</td>
-        <td>5,205,967</td>
+        <td>5,292,590</td>
       </tr><tr>
         <td>1 string arg</td>
-        <td style="color:#f5a623">6.37M</td>
+        <td style="color:#f5a623">6.58M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">294µs</td>
+        <td class="dur">220µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">±0.55%</td>
-        <td>3,185,101</td>
+        <td class="dur">±0.52%</td>
+        <td>3,287,996</td>
       </tr><tr>
         <td>2 mixed args (number + string)</td>
-        <td style="color:#e94560">4.15M</td>
+        <td style="color:#e94560">4.12M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">393µs</td>
+        <td class="dur">412µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">±0.69%</td>
-        <td>2,075,763</td>
+        <td class="dur">±0.68%</td>
+        <td>2,062,246</td>
       </tr><tr>
         <td>1 object arg (sorted-keys JSON)</td>
         <td style="color:#a855f7">1.41M</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">257µs</td>
+        <td class="dur">266µs</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
         <td class="dur">2µs</td>
-        <td class="dur">±0.16%</td>
-        <td>704,457</td>
-      </tr></table><h2>ComputedInput vs raw Map baseline</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: raw Map.get() with pre-computed key</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">20.79M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">ComputedInput + Map.get()</text><rect x="200" y="34" width="195.65077435556634" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="401.65077435556634" y="49" fill="#4db8ff" font-size="12" font-family="monospace">7.82M ops/s</text></svg></div><table>
+        <td class="dur">±0.17%</td>
+        <td>704,027</td>
+      </tr></table><h2>ComputedInput vs raw Map baseline</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: raw Map.get() with pre-computed key</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">21.08M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">ComputedInput + Map.get()</text><rect x="200" y="34" width="189.65592064140762" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="395.65592064140765" y="49" fill="#4db8ff" font-size="12" font-family="monospace">7.69M ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>baseline: raw Map.get() with pre-computed key</td>
-        <td style="color:#16c79a">20.79M</td>
+        <td style="color:#16c79a">21.08M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">222µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">±0.20%</td>
+        <td>10,538,005</td>
+      </tr><tr>
+        <td>ComputedInput + Map.get()</td>
+        <td style="color:#4db8ff">7.69M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">36µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">±0.06%</td>
+        <td>3,843,452</td>
+      </tr></table><h2>runtime baselines</h2><div class="chart-container"><svg width="800" height="234" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">Map.get() hit</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">20.76M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">Map.set() overwrite</text><rect x="200" y="34" width="508.524849600756" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="714.5248496007559" y="49" fill="#4db8ff" font-size="12" font-family="monospace">20.30M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">performance.now()</text><rect x="200" y="64" width="312.2376041824099" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="518.2376041824099" y="79" fill="#f5a623" font-size="12" font-family="monospace">12.47M ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">Date.now()</text><rect x="200" y="94" width="283.24816064782385" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="489.24816064782385" y="109" fill="#e94560" font-size="12" font-family="monospace">11.31M ops/s</text><text x="192" y="139" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">Promise.resolve()</text><rect x="200" y="124" width="201.05931492324243" height="22" rx="3" fill="#a855f7" opacity="0.85"/><text x="407.0593149232424" y="139" fill="#a855f7" font-size="12" font-family="monospace">8.03M ops/s</text><text x="192" y="169" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">JSON.stringify() small object</text><rect x="200" y="154" width="125.18364618677545" height="22" rx="3" fill="#ec4899" opacity="0.85"/><text x="331.18364618677543" y="169" fill="#ec4899" font-size="12" font-family="monospace">5.00M ops/s</text><text x="192" y="199" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">JSON.parse() small object</text><rect x="200" y="184" width="66.07998144225974" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="272.07998144225974" y="199" fill="#16c79a" font-size="12" font-family="monospace">2.64M ops/s</text></svg></div><table>
+      <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
+        <td>Map.get() hit</td>
+        <td style="color:#16c79a">20.76M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">555µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">±0.44%</td>
+        <td>10,380,558</td>
+      </tr><tr>
+        <td>Map.set() overwrite</td>
+        <td style="color:#4db8ff">20.30M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">196µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">±0.17%</td>
+        <td>10,151,482</td>
+      </tr><tr>
+        <td>performance.now()</td>
+        <td style="color:#f5a623">12.47M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">153µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">±0.16%</td>
+        <td>6,233,078</td>
+      </tr><tr>
+        <td>Date.now()</td>
+        <td style="color:#e94560">11.31M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">119µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">±0.17%</td>
+        <td>5,654,373</td>
+      </tr><tr>
+        <td>Promise.resolve()</td>
+        <td style="color:#a855f7">8.03M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">328µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">±0.25%</td>
-        <td>10,394,143</td>
+        <td class="dur">±0.88%</td>
+        <td>4,013,669</td>
       </tr><tr>
-        <td>ComputedInput + Map.get()</td>
-        <td style="color:#4db8ff">7.82M</td>
+        <td>JSON.stringify() small object</td>
+        <td style="color:#ec4899">5.00M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">373µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">±0.90%</td>
+        <td>2,498,992</td>
+      </tr><tr>
+        <td>JSON.parse() small object</td>
+        <td style="color:#16c79a">2.64M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">38µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">±0.05%</td>
+        <td>1,319,129</td>
+      </tr></table><h2>@computed cache hit vs plain async</h2><div class="chart-container"><svg width="800" height="204" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: plain async method (zero-arg)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">7.36M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: plain async method (1 numeric arg)</text><rect x="200" y="34" width="187.2898639994492" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="393.2898639994492" y="49" fill="#4db8ff" font-size="12" font-family="monospace">2.65M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: plain async method (1 object arg)</text><rect x="200" y="64" width="180.60430942032752" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="386.6043094203275" y="79" fill="#f5a623" font-size="12" font-family="monospace">2.56M ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed cache hit (zero-arg)</text><rect x="200" y="94" width="90.85641379719185" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="296.85641379719186" y="109" fill="#e94560" font-size="12" font-family="monospace">1.29M ops/s</text><text x="192" y="139" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed cache hit (1 numeric arg)</text><rect x="200" y="124" width="85.17944198589264" height="22" rx="3" fill="#a855f7" opacity="0.85"/><text x="291.17944198589265" y="139" fill="#a855f7" font-size="12" font-family="monospace">1.21M ops/s</text><text x="192" y="169" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed cache hit (1 object arg)</text><rect x="200" y="154" width="55.61292311587773" height="22" rx="3" fill="#ec4899" opacity="0.85"/><text x="261.6129231158777" y="169" fill="#ec4899" font-size="12" font-family="monospace">787.60K ops/s</text></svg></div><table>
+      <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
+        <td>baseline: plain async method (zero-arg)</td>
+        <td style="color:#16c79a">7.36M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">3.9ms</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">±1.67%</td>
+        <td>3,682,165</td>
+      </tr><tr>
+        <td>baseline: plain async method (1 numeric arg)</td>
+        <td style="color:#4db8ff">2.65M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">234µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">±0.65%</td>
+        <td>1,326,216</td>
+      </tr><tr>
+        <td>baseline: plain async method (1 object arg)</td>
+        <td style="color:#f5a623">2.56M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">350µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">±0.69%</td>
+        <td>1,278,875</td>
+      </tr><tr>
+        <td>@computed cache hit (zero-arg)</td>
+        <td style="color:#e94560">1.29M</td>
+        <td class="dur">1µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">263µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">3µs</td>
+        <td class="dur">±0.69%</td>
+        <td>643,362</td>
+      </tr><tr>
+        <td>@computed cache hit (1 numeric arg)</td>
+        <td style="color:#a855f7">1.21M</td>
+        <td class="dur">1µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">359µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">3µs</td>
+        <td class="dur">±0.70%</td>
+        <td>603,163</td>
+      </tr><tr>
+        <td>@computed cache hit (1 object arg)</td>
+        <td style="color:#ec4899">787.60K</td>
+        <td class="dur">1µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">429µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">2µs</td>
+        <td class="dur">4µs</td>
+        <td class="dur">±0.79%</td>
+        <td>393,800</td>
+      </tr></table><h2>AsyncLocalStorage overhead</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">getStore() outside context</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">25.28M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">getStore() inside context</text><rect x="200" y="34" width="233.70625738867258" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="439.7062573886726" y="49" fill="#4db8ff" font-size="12" font-family="monospace">11.36M ops/s</text></svg></div><table>
+      <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
+        <td>getStore() outside context</td>
+        <td style="color:#16c79a">25.28M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">96µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">±0.10%</td>
+        <td>12,639,106</td>
+      </tr><tr>
+        <td>getStore() inside context</td>
+        <td style="color:#4db8ff">11.36M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">37µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">±0.06%</td>
-        <td>3,910,811</td>
-      </tr></table><h2>runtime baselines</h2><div class="chart-container"><svg width="800" height="234" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">Map.get() hit</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">20.93M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">Map.set() overwrite</text><rect x="200" y="34" width="506.7250559858837" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="712.7250559858837" y="49" fill="#4db8ff" font-size="12" font-family="monospace">20.40M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">performance.now()</text><rect x="200" y="64" width="308.950475378521" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="514.950475378521" y="79" fill="#f5a623" font-size="12" font-family="monospace">12.44M ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">Date.now()</text><rect x="200" y="94" width="277.7525290808598" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="483.7525290808598" y="109" fill="#e94560" font-size="12" font-family="monospace">11.18M ops/s</text><text x="192" y="139" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">Promise.resolve()</text><rect x="200" y="124" width="202.4236172882084" height="22" rx="3" fill="#a855f7" opacity="0.85"/><text x="408.4236172882084" y="139" fill="#a855f7" font-size="12" font-family="monospace">8.15M ops/s</text><text x="192" y="169" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">JSON.stringify() small object</text><rect x="200" y="154" width="118.5229751323775" height="22" rx="3" fill="#ec4899" opacity="0.85"/><text x="324.5229751323775" y="169" fill="#ec4899" font-size="12" font-family="monospace">4.77M ops/s</text><text x="192" y="199" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">JSON.parse() small object</text><rect x="200" y="184" width="64.9337234549532" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="270.9337234549532" y="199" fill="#16c79a" font-size="12" font-family="monospace">2.61M ops/s</text></svg></div><table>
-      <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
-        <td>Map.get() hit</td>
-        <td style="color:#16c79a">20.93M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">337µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">±0.36%</td>
-        <td>10,467,339</td>
-      </tr><tr>
-        <td>Map.set() overwrite</td>
-        <td style="color:#4db8ff">20.40M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">368µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">±0.26%</td>
-        <td>10,200,119</td>
-      </tr><tr>
-        <td>performance.now()</td>
-        <td style="color:#f5a623">12.44M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">149µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">±0.17%</td>
-        <td>6,219,018</td>
-      </tr><tr>
-        <td>Date.now()</td>
-        <td style="color:#e94560">11.18M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">188µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">±0.15%</td>
-        <td>5,591,019</td>
-      </tr><tr>
-        <td>Promise.resolve()</td>
-        <td style="color:#a855f7">8.15M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">177µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">±0.70%</td>
-        <td>4,074,685</td>
-      </tr><tr>
-        <td>JSON.stringify() small object</td>
-        <td style="color:#ec4899">4.77M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">435µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">±0.99%</td>
-        <td>2,385,808</td>
-      </tr><tr>
-        <td>JSON.parse() small object</td>
-        <td style="color:#16c79a">2.61M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">245µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">±0.11%</td>
-        <td>1,307,083</td>
-      </tr></table><h2>@computed cache hit vs plain async</h2><div class="chart-container"><svg width="800" height="204" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: plain async method (zero-arg)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">7.86M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: plain async method (1 object arg)</text><rect x="200" y="34" width="177.77192884339757" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="383.7719288433976" y="49" fill="#4db8ff" font-size="12" font-family="monospace">2.69M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: plain async method (1 numeric arg)</text><rect x="200" y="64" width="176.63743476558372" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="382.63743476558375" y="79" fill="#f5a623" font-size="12" font-family="monospace">2.67M ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed cache hit (zero-arg)</text><rect x="200" y="94" width="85.07339005896954" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="291.07339005896955" y="109" fill="#e94560" font-size="12" font-family="monospace">1.29M ops/s</text><text x="192" y="139" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed cache hit (1 numeric arg)</text><rect x="200" y="124" width="78.80207486821921" height="22" rx="3" fill="#a855f7" opacity="0.85"/><text x="284.8020748682192" y="139" fill="#a855f7" font-size="12" font-family="monospace">1.19M ops/s</text><text x="192" y="169" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed cache hit (1 object arg)</text><rect x="200" y="154" width="50.440123066847576" height="22" rx="3" fill="#ec4899" opacity="0.85"/><text x="256.4401230668476" y="169" fill="#ec4899" font-size="12" font-family="monospace">762.12K ops/s</text></svg></div><table>
-      <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
-        <td>baseline: plain async method (zero-arg)</td>
-        <td style="color:#16c79a">7.86M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">223µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">±0.51%</td>
-        <td>3,928,429</td>
-      </tr><tr>
-        <td>baseline: plain async method (1 object arg)</td>
-        <td style="color:#4db8ff">2.69M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">277µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">±0.74%</td>
-        <td>1,343,009</td>
-      </tr><tr>
-        <td>baseline: plain async method (1 numeric arg)</td>
-        <td style="color:#f5a623">2.67M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">233µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">±0.63%</td>
-        <td>1,334,438</td>
-      </tr><tr>
-        <td>@computed cache hit (zero-arg)</td>
-        <td style="color:#e94560">1.29M</td>
-        <td class="dur">1µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">336µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">3µs</td>
-        <td class="dur">±0.64%</td>
-        <td>642,702</td>
-      </tr><tr>
-        <td>@computed cache hit (1 numeric arg)</td>
-        <td style="color:#a855f7">1.19M</td>
-        <td class="dur">1µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">286µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">3µs</td>
-        <td class="dur">±0.75%</td>
-        <td>595,324</td>
-      </tr><tr>
-        <td>@computed cache hit (1 object arg)</td>
-        <td style="color:#ec4899">762.12K</td>
-        <td class="dur">1µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">388µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">2µs</td>
-        <td class="dur">3µs</td>
-        <td class="dur">±0.81%</td>
-        <td>381,059</td>
-      </tr></table><h2>AsyncLocalStorage overhead</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">getStore() outside context</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">25.29M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">getStore() inside context</text><rect x="200" y="34" width="236.28918690034075" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="442.2891869003407" y="49" fill="#4db8ff" font-size="12" font-family="monospace">11.49M ops/s</text></svg></div><table>
-      <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
-        <td>getStore() outside context</td>
-        <td style="color:#16c79a">25.29M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">33µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">±0.08%</td>
-        <td>12,647,439</td>
-      </tr><tr>
-        <td>getStore() inside context</td>
-        <td style="color:#4db8ff">11.49M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">43µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
         <td class="dur">±0.07%</td>
-        <td>5,747,024</td>
-      </tr></table><h2>computed lifecycle</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">cache hit + invalidate + re-register</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.36M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">create + setOutput + register</text><rect x="200" y="34" width="280.3900526246499" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="486.3900526246499" y="49" fill="#4db8ff" font-size="12" font-family="monospace">731.36K ops/s</text></svg></div><table>
+        <td>5,680,458</td>
+      </tr></table><h2>computed lifecycle</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">cache hit + invalidate + re-register</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.28M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">create + setOutput + register</text><rect x="200" y="34" width="294.7260455732801" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="500.7260455732801" y="49" fill="#4db8ff" font-size="12" font-family="monospace">727.99K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>cache hit + invalidate + re-register</td>
-        <td style="color:#16c79a">1.36M</td>
+        <td style="color:#16c79a">1.28M</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">485µs</td>
+        <td class="dur">604µs</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
         <td class="dur">2µs</td>
-        <td class="dur">±1.42%</td>
-        <td>678,175</td>
+        <td class="dur">±1.24%</td>
+        <td>642,213</td>
       </tr><tr>
         <td>create + setOutput + register</td>
-        <td style="color:#4db8ff">731.36K</td>
+        <td style="color:#4db8ff">727.99K</td>
         <td class="dur">1µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">9.8ms</td>
+        <td class="dur">8.4ms</td>
         <td class="dur">1µs</td>
         <td class="dur">2µs</td>
         <td class="dur">4µs</td>
-        <td class="dur">±9.64%</td>
-        <td>365,680</td>
-      </tr></table><h2>@computed method lifecycle</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">hot call (cache hit)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.17M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">cold call (no cache)</text><rect x="200" y="34" width="92.21165378580419" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="298.2116537858042" y="49" fill="#4db8ff" font-size="12" font-family="monospace">207.67K ops/s</text></svg></div><table>
+        <td class="dur">±8.23%</td>
+        <td>363,996</td>
+      </tr></table><h2>@computed method lifecycle</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">hot call (cache hit)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.13M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">cold call (no cache)</text><rect x="200" y="34" width="89.11397077244462" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="295.11397077244465" y="49" fill="#4db8ff" font-size="12" font-family="monospace">193.80K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>hot call (cache hit)</td>
-        <td style="color:#16c79a">1.17M</td>
+        <td style="color:#16c79a">1.13M</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">703µs</td>
+        <td class="dur">759µs</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">3µs</td>
-        <td class="dur">±2.05%</td>
-        <td>585,557</td>
+        <td class="dur">2µs</td>
+        <td class="dur">±1.75%</td>
+        <td>565,447</td>
       </tr><tr>
         <td>cold call (no cache)</td>
-        <td style="color:#4db8ff">207.67K</td>
+        <td style="color:#4db8ff">193.80K</td>
         <td class="dur">5µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">2.3ms</td>
-        <td class="dur">4µs</td>
-        <td class="dur">6µs</td>
-        <td class="dur">29µs</td>
-        <td class="dur">±5.40%</td>
-        <td>104,174</td>
-      </tr></table><h2>capture() + whenInvalidated()</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">capture() a @computed method</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">167.10K ops/s</text></svg></div><table>
+        <td class="dur">2.1ms</td>
+        <td class="dur">5µs</td>
+        <td class="dur">7µs</td>
+        <td class="dur">26µs</td>
+        <td class="dur">±4.95%</td>
+        <td>96,903</td>
+      </tr></table><h2>capture() + whenInvalidated()</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">capture() a @computed method</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">162.73K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>capture() a @computed method</td>
-        <td style="color:#16c79a">167.10K</td>
+        <td style="color:#16c79a">162.73K</td>
         <td class="dur">6µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">2.4ms</td>
+        <td class="dur">2.3ms</td>
         <td class="dur">5µs</td>
         <td class="dur">8µs</td>
-        <td class="dur">35µs</td>
-        <td class="dur">±5.82%</td>
-        <td>83,551</td>
-      </tr></table><h2>registry size = 100</h2><div class="chart-container"><svg width="800" height="144" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() miss</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">14.52M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() hit (consistent)</text><rect x="200" y="34" width="435.22950814041087" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="641.2295081404109" y="49" fill="#4db8ff" font-size="12" font-family="monospace">12.15M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() stale (invalidated, triggers lazy delete)</text><rect x="200" y="64" width="2" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="206.98651737295262" y="79" fill="#f5a623" font-size="12" font-family="monospace">27.54K ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">register() + unregister() cycle</text><rect x="200" y="94" width="2" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="206.90678813182083" y="109" fill="#e94560" font-size="12" font-family="monospace">25.32K ops/s</text></svg></div><table>
+        <td class="dur">37µs</td>
+        <td class="dur">±5.00%</td>
+        <td>81,416</td>
+      </tr></table><h2>registry size = 100</h2><div class="chart-container"><svg width="800" height="144" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() miss</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">14.55M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() hit (consistent)</text><rect x="200" y="34" width="418.80245421057043" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="624.8024542105704" y="49" fill="#4db8ff" font-size="12" font-family="monospace">11.72M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() stale (invalidated, triggers lazy delete)</text><rect x="200" y="64" width="2" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="206.98536760632177" y="79" fill="#f5a623" font-size="12" font-family="monospace">27.57K ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">register() + unregister() cycle</text><rect x="200" y="94" width="2" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="206.90561040290552" y="109" fill="#e94560" font-size="12" font-family="monospace">25.34K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>get() miss</td>
-        <td style="color:#16c79a">14.52M</td>
+        <td style="color:#16c79a">14.55M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">230µs</td>
+        <td class="dur">201µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">±0.26%</td>
-        <td>7,258,683</td>
+        <td class="dur">±0.25%</td>
+        <td>7,274,001</td>
       </tr><tr>
         <td>get() hit (consistent)</td>
-        <td style="color:#4db8ff">12.15M</td>
+        <td style="color:#4db8ff">11.72M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">170µs</td>
+        <td class="dur">242µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">±0.14%</td>
-        <td>6,075,370</td>
+        <td class="dur">±0.18%</td>
+        <td>5,858,404</td>
       </tr><tr>
         <td>get() stale (invalidated, triggers lazy delete)</td>
-        <td style="color:#f5a623">27.54K</td>
+        <td style="color:#f5a623">27.57K</td>
         <td class="dur">36µs</td>
         <td class="dur">13µs</td>
-        <td class="dur">621µs</td>
+        <td class="dur">647µs</td>
         <td class="dur">48µs</td>
         <td class="dur">58µs</td>
         <td class="dur">61µs</td>
         <td class="dur">±0.66%</td>
-        <td>13,771</td>
+        <td>13,785</td>
       </tr><tr>
         <td>register() + unregister() cycle</td>
-        <td style="color:#e94560">25.32K</td>
-        <td class="dur">40µs</td>
-        <td class="dur">18µs</td>
-        <td class="dur">637µs</td>
+        <td style="color:#e94560">25.34K</td>
+        <td class="dur">39µs</td>
+        <td class="dur">17µs</td>
+        <td class="dur">640µs</td>
         <td class="dur">50µs</td>
-        <td class="dur">62µs</td>
-        <td class="dur">65µs</td>
+        <td class="dur">61µs</td>
+        <td class="dur">64µs</td>
         <td class="dur">±0.60%</td>
-        <td>12,658</td>
-      </tr></table><h2>registry size = 1000</h2><div class="chart-container"><svg width="800" height="144" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() miss</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">14.50M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() hit (consistent)</text><rect x="200" y="34" width="449.57358524167205" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="655.573585241672" y="49" fill="#4db8ff" font-size="12" font-family="monospace">12.53M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() stale (invalidated, triggers lazy delete)</text><rect x="200" y="64" width="2" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="206.89040024485632" y="79" fill="#f5a623" font-size="12" font-family="monospace">24.83K ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">register() + unregister() cycle</text><rect x="200" y="94" width="2" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="206.89008166639886" y="109" fill="#e94560" font-size="12" font-family="monospace">24.82K ops/s</text></svg></div><table>
+        <td>12,669</td>
+      </tr></table><h2>registry size = 1000</h2><div class="chart-container"><svg width="800" height="144" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() miss</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">14.69M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() hit (consistent)</text><rect x="200" y="34" width="423.44733977508406" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="629.4473397750841" y="49" fill="#4db8ff" font-size="12" font-family="monospace">11.96M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() stale (invalidated, triggers lazy delete)</text><rect x="200" y="64" width="2" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="206.8742832813189" y="79" fill="#f5a623" font-size="12" font-family="monospace">24.70K ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">register() + unregister() cycle</text><rect x="200" y="94" width="2" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="206.8709384567509" y="109" fill="#e94560" font-size="12" font-family="monospace">24.61K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>get() miss</td>
-        <td style="color:#16c79a">14.50M</td>
+        <td style="color:#16c79a">14.69M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">290µs</td>
+        <td class="dur">357µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">±0.38%</td>
-        <td>7,249,018</td>
+        <td class="dur">±0.33%</td>
+        <td>7,345,316</td>
       </tr><tr>
         <td>get() hit (consistent)</td>
-        <td style="color:#4db8ff">12.53M</td>
+        <td style="color:#4db8ff">11.96M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">400µs</td>
+        <td class="dur">355µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">±0.38%</td>
-        <td>6,267,243</td>
+        <td class="dur">±0.28%</td>
+        <td>5,981,451</td>
       </tr><tr>
         <td>get() stale (invalidated, triggers lazy delete)</td>
-        <td style="color:#f5a623">24.83K</td>
+        <td style="color:#f5a623">24.70K</td>
         <td class="dur">40µs</td>
         <td class="dur">19µs</td>
-        <td class="dur">641µs</td>
-        <td class="dur">50µs</td>
+        <td class="dur">648µs</td>
+        <td class="dur">51µs</td>
         <td class="dur">61µs</td>
-        <td class="dur">63µs</td>
+        <td class="dur">65µs</td>
         <td class="dur">±0.58%</td>
-        <td>12,414</td>
+        <td>12,350</td>
       </tr><tr>
         <td>register() + unregister() cycle</td>
-        <td style="color:#e94560">24.82K</td>
-        <td class="dur">40µs</td>
-        <td class="dur">19µs</td>
-        <td class="dur">83µs</td>
-        <td class="dur">50µs</td>
-        <td class="dur">60µs</td>
-        <td class="dur">64µs</td>
-        <td class="dur">±0.51%</td>
-        <td>12,409</td>
-      </tr></table><h2>registry size = 10000</h2><div class="chart-container"><svg width="800" height="144" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() miss</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">14.56M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() hit (consistent)</text><rect x="200" y="34" width="396.08091470285825" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="602.0809147028583" y="49" fill="#4db8ff" font-size="12" font-family="monospace">11.09M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">register() + unregister() cycle</text><rect x="200" y="64" width="2" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="206.8841789137884" y="79" fill="#f5a623" font-size="12" font-family="monospace">24.75K ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() stale (invalidated, triggers lazy delete)</text><rect x="200" y="94" width="2" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="206.87896399656552" y="109" fill="#e94560" font-size="12" font-family="monospace">24.61K ops/s</text></svg></div><table>
-      <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
-        <td>get() miss</td>
-        <td style="color:#16c79a">14.56M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">169µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">±0.19%</td>
-        <td>7,278,917</td>
-      </tr><tr>
-        <td>get() hit (consistent)</td>
-        <td style="color:#4db8ff">11.09M</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">411µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">0µs</td>
-        <td class="dur">±0.49%</td>
-        <td>5,544,309</td>
-      </tr><tr>
-        <td>register() + unregister() cycle</td>
-        <td style="color:#f5a623">24.75K</td>
-        <td class="dur">40µs</td>
-        <td class="dur">20µs</td>
-        <td class="dur">533µs</td>
-        <td class="dur">50µs</td>
-        <td class="dur">61µs</td>
-        <td class="dur">64µs</td>
-        <td class="dur">±0.55%</td>
-        <td>12,378</td>
-      </tr><tr>
-        <td>get() stale (invalidated, triggers lazy delete)</td>
         <td style="color:#e94560">24.61K</td>
         <td class="dur">41µs</td>
         <td class="dur">19µs</td>
-        <td class="dur">520µs</td>
+        <td class="dur">686µs</td>
         <td class="dur">51µs</td>
-        <td class="dur">62µs</td>
-        <td class="dur">65µs</td>
-        <td class="dur">±0.56%</td>
-        <td>12,304</td>
-      </tr></table><h2>throughput (100 keys)</h2><div class="chart-container"><svg width="800" height="144" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: plain Map cache reads</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">2.45M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (0% invalidation)</text><rect x="200" y="34" width="228.92716879249775" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="434.92716879249775" y="49" fill="#4db8ff" font-size="12" font-family="monospace">1.08M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (10% invalidation)</text><rect x="200" y="64" width="49.74517061110505" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="255.74517061110504" y="79" fill="#f5a623" font-size="12" font-family="monospace">234.42K ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (1% invalidation)</text><rect x="200" y="94" width="48.27450692528982" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="254.2745069252898" y="109" fill="#e94560" font-size="12" font-family="monospace">227.49K ops/s</text></svg></div><table>
+        <td class="dur">61µs</td>
+        <td class="dur">67µs</td>
+        <td class="dur">±0.58%</td>
+        <td>12,303</td>
+      </tr></table><h2>registry size = 10000</h2><div class="chart-container"><svg width="800" height="144" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() miss</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">14.88M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() hit (consistent)</text><rect x="200" y="34" width="427.35319437964074" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="633.3531943796407" y="49" fill="#4db8ff" font-size="12" font-family="monospace">12.23M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">register() + unregister() cycle</text><rect x="200" y="64" width="2" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="206.8640302901606" y="79" fill="#f5a623" font-size="12" font-family="monospace">24.73K ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">get() stale (invalidated, triggers lazy delete)</text><rect x="200" y="94" width="2" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="206.8543472053932" y="109" fill="#e94560" font-size="12" font-family="monospace">24.45K ops/s</text></svg></div><table>
+      <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
+        <td>get() miss</td>
+        <td style="color:#16c79a">14.88M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">270µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">±0.29%</td>
+        <td>7,441,803</td>
+      </tr><tr>
+        <td>get() hit (consistent)</td>
+        <td style="color:#4db8ff">12.23M</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">415µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">0µs</td>
+        <td class="dur">±0.46%</td>
+        <td>6,115,921</td>
+      </tr><tr>
+        <td>register() + unregister() cycle</td>
+        <td style="color:#f5a623">24.73K</td>
+        <td class="dur">40µs</td>
+        <td class="dur">19µs</td>
+        <td class="dur">88µs</td>
+        <td class="dur">51µs</td>
+        <td class="dur">61µs</td>
+        <td class="dur">69µs</td>
+        <td class="dur">±0.53%</td>
+        <td>12,366</td>
+      </tr><tr>
+        <td>get() stale (invalidated, triggers lazy delete)</td>
+        <td style="color:#e94560">24.45K</td>
+        <td class="dur">41µs</td>
+        <td class="dur">20µs</td>
+        <td class="dur">620µs</td>
+        <td class="dur">52µs</td>
+        <td class="dur">61µs</td>
+        <td class="dur">71µs</td>
+        <td class="dur">±0.58%</td>
+        <td>12,227</td>
+      </tr></table><h2>throughput (100 keys)</h2><div class="chart-container"><svg width="800" height="144" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: plain Map cache reads</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">2.43M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (0% invalidation)</text><rect x="200" y="34" width="230.0369540799048" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="436.03695407990483" y="49" fill="#4db8ff" font-size="12" font-family="monospace">1.07M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (1% invalidation)</text><rect x="200" y="64" width="48.15472402927702" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="254.15472402927702" y="79" fill="#f5a623" font-size="12" font-family="monospace">224.92K ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (10% invalidation)</text><rect x="200" y="94" width="47.60768687815475" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="253.60768687815477" y="109" fill="#e94560" font-size="12" font-family="monospace">222.36K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>baseline: plain Map cache reads</td>
-        <td style="color:#16c79a">2.45M</td>
+        <td style="color:#16c79a">2.43M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">1.5ms</td>
+        <td class="dur">2.2ms</td>
         <td class="dur">0µs</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">±0.77%</td>
-        <td>1,225,244</td>
+        <td class="dur">±1.01%</td>
+        <td>1,214,386</td>
       </tr><tr>
         <td>@computed reads (0% invalidation)</td>
-        <td style="color:#4db8ff">1.08M</td>
+        <td style="color:#4db8ff">1.07M</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">1.8ms</td>
+        <td class="dur">3.3ms</td>
         <td class="dur">1µs</td>
         <td class="dur">2µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">±0.83%</td>
-        <td>539,407</td>
-      </tr><tr>
-        <td>@computed reads (10% invalidation)</td>
-        <td style="color:#f5a623">234.42K</td>
-        <td class="dur">4µs</td>
-        <td class="dur">3µs</td>
-        <td class="dur">1.7ms</td>
-        <td class="dur">4µs</td>
-        <td class="dur">6µs</td>
-        <td class="dur">15µs</td>
-        <td class="dur">±3.89%</td>
-        <td>117,212</td>
+        <td class="dur">±1.36%</td>
+        <td>537,219</td>
       </tr><tr>
         <td>@computed reads (1% invalidation)</td>
-        <td style="color:#e94560">227.49K</td>
+        <td style="color:#f5a623">224.92K</td>
         <td class="dur">4µs</td>
         <td class="dur">3µs</td>
         <td class="dur">1.8ms</td>
         <td class="dur">4µs</td>
         <td class="dur">6µs</td>
-        <td class="dur">22µs</td>
-        <td class="dur">±4.02%</td>
-        <td>113,864</td>
-      </tr></table><h2>throughput (1000 keys)</h2><div class="chart-container"><svg width="800" height="144" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: plain Map cache reads</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">2.38M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (0% invalidation)</text><rect x="200" y="34" width="233.465186896169" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="439.46518689616903" y="49" fill="#4db8ff" font-size="12" font-family="monospace">1.07M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (10% invalidation)</text><rect x="200" y="64" width="49.07559892809684" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="255.07559892809684" y="79" fill="#f5a623" font-size="12" font-family="monospace">224.70K ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (1% invalidation)</text><rect x="200" y="94" width="48.695166670521665" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="254.69516667052167" y="109" fill="#e94560" font-size="12" font-family="monospace">222.96K ops/s</text></svg></div><table>
+        <td class="dur">26µs</td>
+        <td class="dur">±4.03%</td>
+        <td>112,459</td>
+      </tr><tr>
+        <td>@computed reads (10% invalidation)</td>
+        <td style="color:#e94560">222.36K</td>
+        <td class="dur">4µs</td>
+        <td class="dur">3µs</td>
+        <td class="dur">1.9ms</td>
+        <td class="dur">4µs</td>
+        <td class="dur">7µs</td>
+        <td class="dur">27µs</td>
+        <td class="dur">±3.89%</td>
+        <td>111,181</td>
+      </tr></table><h2>throughput (1000 keys)</h2><div class="chart-container"><svg width="800" height="144" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">baseline: plain Map cache reads</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">2.44M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (0% invalidation)</text><rect x="200" y="34" width="223.1486307945863" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="429.1486307945863" y="49" fill="#4db8ff" font-size="12" font-family="monospace">1.05M ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (10% invalidation)</text><rect x="200" y="64" width="49.82149179327682" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="255.82149179327683" y="79" fill="#f5a623" font-size="12" font-family="monospace">233.36K ops/s</text><text x="192" y="109" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">@computed reads (1% invalidation)</text><rect x="200" y="94" width="47.97932875933714" height="22" rx="3" fill="#e94560" opacity="0.85"/><text x="253.97932875933714" y="109" fill="#e94560" font-size="12" font-family="monospace">224.73K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>baseline: plain Map cache reads</td>
-        <td style="color:#16c79a">2.38M</td>
+        <td style="color:#16c79a">2.44M</td>
         <td class="dur">0µs</td>
         <td class="dur">0µs</td>
         <td class="dur">1.5ms</td>
@@ -582,44 +582,44 @@
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
         <td class="dur">±0.79%</td>
-        <td>1,190,445</td>
+        <td>1,217,829</td>
       </tr><tr>
         <td>@computed reads (0% invalidation)</td>
-        <td style="color:#4db8ff">1.07M</td>
+        <td style="color:#4db8ff">1.05M</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">272µs</td>
+        <td class="dur">189µs</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">±0.47%</td>
-        <td>534,476</td>
+        <td class="dur">±0.44%</td>
+        <td>522,610</td>
       </tr><tr>
         <td>@computed reads (10% invalidation)</td>
-        <td style="color:#f5a623">224.70K</td>
+        <td style="color:#f5a623">233.36K</td>
         <td class="dur">4µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">1.7ms</td>
+        <td class="dur">2.0ms</td>
         <td class="dur">4µs</td>
-        <td class="dur">6µs</td>
-        <td class="dur">18µs</td>
-        <td class="dur">±3.93%</td>
-        <td>112,350</td>
+        <td class="dur">7µs</td>
+        <td class="dur">41µs</td>
+        <td class="dur">±3.60%</td>
+        <td>116,682</td>
       </tr><tr>
         <td>@computed reads (1% invalidation)</td>
-        <td style="color:#e94560">222.96K</td>
+        <td style="color:#e94560">224.73K</td>
         <td class="dur">4µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">3.8ms</td>
+        <td class="dur">2.6ms</td>
         <td class="dur">4µs</td>
-        <td class="dur">6µs</td>
-        <td class="dur">17µs</td>
-        <td class="dur">±4.19%</td>
-        <td>111,479</td>
-      </tr></table><h2>@computed cache hit</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">cached call (no args)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.63M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">cached call (string arg)</text><rect x="200" y="34" width="350.23730090998777" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="556.2373009099878" y="49" fill="#4db8ff" font-size="12" font-family="monospace">1.10M ops/s</text></svg></div><table>
+        <td class="dur">7µs</td>
+        <td class="dur">21µs</td>
+        <td class="dur">±4.08%</td>
+        <td>112,367</td>
+      </tr></table><h2>@computed cache hit</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">cached call (no args)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.72M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">cached call (string arg)</text><rect x="200" y="34" width="323.04033651441546" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="529.0403365144155" y="49" fill="#4db8ff" font-size="12" font-family="monospace">1.07M ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>cached call (no args)</td>
-        <td style="color:#16c79a">1.63M</td>
+        <td style="color:#16c79a">1.72M</td>
         <td class="dur">1µs</td>
         <td class="dur">0µs</td>
         <td class="dur">1.3ms</td>
@@ -627,237 +627,237 @@
         <td class="dur">1µs</td>
         <td class="dur">3µs</td>
         <td class="dur">±0.58%</td>
-        <td>813,196</td>
+        <td>858,161</td>
       </tr><tr>
         <td>cached call (string arg)</td>
-        <td style="color:#4db8ff">1.10M</td>
+        <td style="color:#4db8ff">1.07M</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">186µs</td>
+        <td class="dur">190µs</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">±0.43%</td>
-        <td>547,715</td>
-      </tr></table><h2>@computed cold compute</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">first call (no cache)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">193.20K ops/s</text></svg></div><table>
+        <td class="dur">±0.48%</td>
+        <td>533,117</td>
+      </tr></table><h2>@computed cold compute</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">first call (no cache)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">192.61K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>first call (no cache)</td>
-        <td style="color:#16c79a">193.20K</td>
+        <td style="color:#16c79a">192.61K</td>
         <td class="dur">5µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">5.9ms</td>
-        <td class="dur">5µs</td>
-        <td class="dur">8µs</td>
-        <td class="dur">14µs</td>
+        <td class="dur">5.0ms</td>
+        <td class="dur">4µs</td>
+        <td class="dur">7µs</td>
+        <td class="dur">17µs</td>
         <td class="dur">±5.42%</td>
-        <td>96,601</td>
-      </tr></table><h2>invalidation</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">invalidate + recompute single</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">16.29K ops/s</text></svg></div><table>
+        <td>96,307</td>
+      </tr></table><h2>invalidation</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">invalidate + recompute single</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">15.99K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>invalidate + recompute single</td>
-        <td style="color:#16c79a">16.29K</td>
-        <td class="dur">61µs</td>
-        <td class="dur">33µs</td>
-        <td class="dur">1.4ms</td>
-        <td class="dur">75µs</td>
-        <td class="dur">88µs</td>
-        <td class="dur">104µs</td>
-        <td class="dur">±1.26%</td>
-        <td>8,147</td>
-      </tr></table><h2>transitive invalidation chain (depth=4)</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">invalidate base → recompute level3</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">8.36K ops/s</text></svg></div><table>
+        <td style="color:#16c79a">15.99K</td>
+        <td class="dur">63µs</td>
+        <td class="dur">34µs</td>
+        <td class="dur">1.5ms</td>
+        <td class="dur">74µs</td>
+        <td class="dur">132µs</td>
+        <td class="dur">136µs</td>
+        <td class="dur">±1.36%</td>
+        <td>7,994</td>
+      </tr></table><h2>transitive invalidation chain (depth=4)</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">invalidate base → recompute level3</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">8.55K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>invalidate base → recompute level3</td>
-        <td style="color:#16c79a">8.36K</td>
-        <td class="dur">120µs</td>
-        <td class="dur">58µs</td>
-        <td class="dur">1.9ms</td>
+        <td style="color:#16c79a">8.55K</td>
+        <td class="dur">117µs</td>
+        <td class="dur">55µs</td>
+        <td class="dur">1.8ms</td>
         <td class="dur">143µs</td>
-        <td class="dur">182µs</td>
+        <td class="dur">171µs</td>
         <td class="dur">1.7ms</td>
-        <td class="dur">±2.00%</td>
-        <td>4,178</td>
-      </tr></table><h2>fan-out invalidation</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">invalidate root → recompute 100 leaves</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.03K ops/s</text></svg></div><table>
+        <td class="dur">±2.07%</td>
+        <td>4,273</td>
+      </tr></table><h2>fan-out invalidation</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">invalidate root → recompute 100 leaves</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.05K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>invalidate root → recompute 100 leaves</td>
-        <td style="color:#16c79a">1.03K</td>
-        <td class="dur">969µs</td>
-        <td class="dur">546µs</td>
-        <td class="dur">2.9ms</td>
+        <td style="color:#16c79a">1.05K</td>
+        <td class="dur">957µs</td>
+        <td class="dur">535µs</td>
+        <td class="dur">2.8ms</td>
         <td class="dur">1.0ms</td>
         <td class="dur">2.7ms</td>
-        <td class="dur">2.9ms</td>
-        <td class="dur">±3.60%</td>
-        <td>517</td>
-      </tr></table><h2>ComputedRegistry lookup</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">cache hit among 100 entries</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">980.75K ops/s</text></svg></div><table>
+        <td class="dur">2.8ms</td>
+        <td class="dur">±3.42%</td>
+        <td>523</td>
+      </tr></table><h2>ComputedRegistry lookup</h2><div class="chart-container"><svg width="800" height="54" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">cache hit among 100 entries</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.03M ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>cache hit among 100 entries</td>
-        <td style="color:#16c79a">980.75K</td>
+        <td style="color:#16c79a">1.03M</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">497µs</td>
+        <td class="dur">593µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">2µs</td>
+        <td class="dur">1µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">±1.17%</td>
-        <td>490,376</td>
-      </tr></table><h2>invalidation: linear chain</h2><div class="chart-container"><svg width="800" height="114" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">linear chain (10 nodes) — invalidate root</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">230.16K ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">linear chain (100 nodes) — invalidate root</text><rect x="200" y="34" width="52.2104688590286" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="258.2104688590286" y="49" fill="#4db8ff" font-size="12" font-family="monospace">23.11K ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">linear chain (1000 nodes) — invalidate root</text><rect x="200" y="64" width="3.275714988533751" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="209.27571498853376" y="79" fill="#f5a623" font-size="12" font-family="monospace">1.45K ops/s</text></svg></div><table>
+        <td class="dur">±1.22%</td>
+        <td>516,991</td>
+      </tr></table><h2>invalidation: linear chain</h2><div class="chart-container"><svg width="800" height="114" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">linear chain (10 nodes) — invalidate root</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">214.17K ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">linear chain (100 nodes) — invalidate root</text><rect x="200" y="34" width="56.31496181100785" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="262.31496181100783" y="49" fill="#4db8ff" font-size="12" font-family="monospace">23.19K ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">linear chain (1000 nodes) — invalidate root</text><rect x="200" y="64" width="3.0931907218963004" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="209.0931907218963" y="79" fill="#f5a623" font-size="12" font-family="monospace">1.27K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>linear chain (10 nodes) — invalidate root</td>
-        <td style="color:#16c79a">230.16K</td>
+        <td style="color:#16c79a">214.17K</td>
+        <td class="dur">5µs</td>
         <td class="dur">4µs</td>
+        <td class="dur">1.0ms</td>
         <td class="dur">4µs</td>
-        <td class="dur">974µs</td>
-        <td class="dur">4µs</td>
-        <td class="dur">11µs</td>
-        <td class="dur">56µs</td>
-        <td class="dur">±0.53%</td>
-        <td>115,081</td>
+        <td class="dur">27µs</td>
+        <td class="dur">54µs</td>
+        <td class="dur">±0.63%</td>
+        <td>107,083</td>
       </tr><tr>
         <td>linear chain (100 nodes) — invalidate root</td>
-        <td style="color:#4db8ff">23.11K</td>
+        <td style="color:#4db8ff">23.19K</td>
         <td class="dur">43µs</td>
-        <td class="dur">38µs</td>
-        <td class="dur">327µs</td>
         <td class="dur">40µs</td>
-        <td class="dur">115µs</td>
-        <td class="dur">212µs</td>
-        <td class="dur">±0.68%</td>
-        <td>11,555</td>
+        <td class="dur">291µs</td>
+        <td class="dur">42µs</td>
+        <td class="dur">109µs</td>
+        <td class="dur">189µs</td>
+        <td class="dur">±0.53%</td>
+        <td>11,598</td>
       </tr><tr>
         <td>linear chain (1000 nodes) — invalidate root</td>
-        <td style="color:#f5a623">1.45K</td>
-        <td class="dur">690µs</td>
-        <td class="dur">396µs</td>
-        <td class="dur">1.8ms</td>
-        <td class="dur">982µs</td>
-        <td class="dur">1.5ms</td>
-        <td class="dur">1.8ms</td>
-        <td class="dur">±3.40%</td>
-        <td>725</td>
-      </tr></table><h2>invalidation: fan-out</h2><div class="chart-container"><svg width="800" height="114" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">fan-out (1 root → 10 dependants) — invalidate root</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">303.15K ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">fan-out (1 root → 100 dependants) — invalidate root</text><rect x="200" y="34" width="50.06618074129663" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="256.06618074129665" y="49" fill="#4db8ff" font-size="12" font-family="monospace">29.19K ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">fan-out (1 root → 1000 dependants) — invalidate root</text><rect x="200" y="64" width="3.865497211138705" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="209.86549721113872" y="79" fill="#f5a623" font-size="12" font-family="monospace">2.25K ops/s</text></svg></div><table>
+        <td style="color:#f5a623">1.27K</td>
+        <td class="dur">785µs</td>
+        <td class="dur">418µs</td>
+        <td class="dur">1.9ms</td>
+        <td class="dur">1.2ms</td>
+        <td class="dur">1.7ms</td>
+        <td class="dur">1.9ms</td>
+        <td class="dur">±3.50%</td>
+        <td>637</td>
+      </tr></table><h2>invalidation: fan-out</h2><div class="chart-container"><svg width="800" height="114" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">fan-out (1 root → 10 dependants) — invalidate root</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">297.87K ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">fan-out (1 root → 100 dependants) — invalidate root</text><rect x="200" y="34" width="47.76484638029075" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="253.76484638029075" y="49" fill="#4db8ff" font-size="12" font-family="monospace">27.36K ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">fan-out (1 root → 1000 dependants) — invalidate root</text><rect x="200" y="64" width="3.6832189972027543" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="209.68321899720274" y="79" fill="#f5a623" font-size="12" font-family="monospace">2.11K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>fan-out (1 root → 10 dependants) — invalidate root</td>
-        <td style="color:#16c79a">303.15K</td>
+        <td style="color:#16c79a">297.87K</td>
         <td class="dur">3µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">218µs</td>
+        <td class="dur">250µs</td>
         <td class="dur">3µs</td>
         <td class="dur">5µs</td>
-        <td class="dur">8µs</td>
-        <td class="dur">±0.36%</td>
-        <td>151,575</td>
+        <td class="dur">7µs</td>
+        <td class="dur">±0.39%</td>
+        <td>148,936</td>
       </tr><tr>
         <td>fan-out (1 root → 100 dependants) — invalidate root</td>
-        <td style="color:#4db8ff">29.19K</td>
-        <td class="dur">34µs</td>
-        <td class="dur">26µs</td>
-        <td class="dur">387µs</td>
-        <td class="dur">29µs</td>
-        <td class="dur">108µs</td>
-        <td class="dur">240µs</td>
-        <td class="dur">±0.97%</td>
-        <td>14,594</td>
+        <td style="color:#4db8ff">27.36K</td>
+        <td class="dur">37µs</td>
+        <td class="dur">27µs</td>
+        <td class="dur">372µs</td>
+        <td class="dur">30µs</td>
+        <td class="dur">79µs</td>
+        <td class="dur">275µs</td>
+        <td class="dur">±0.96%</td>
+        <td>13,681</td>
       </tr><tr>
         <td>fan-out (1 root → 1000 dependants) — invalidate root</td>
-        <td style="color:#f5a623">2.25K</td>
-        <td class="dur">444µs</td>
-        <td class="dur">261µs</td>
-        <td class="dur">1.3ms</td>
-        <td class="dur">680µs</td>
+        <td style="color:#f5a623">2.11K</td>
+        <td class="dur">474µs</td>
+        <td class="dur">275µs</td>
+        <td class="dur">1.7ms</td>
+        <td class="dur">694µs</td>
         <td class="dur">1.1ms</td>
         <td class="dur">1.2ms</td>
-        <td class="dur">±2.89%</td>
-        <td>1,127</td>
-      </tr></table><h2>RPC round-trip (linked transport)</h2><div class="chart-container"><svg width="800" height="114" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">regular call: add(a, b)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.32M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">compute call: @computed method (hot)</text><rect x="200" y="34" width="334.31652361008537" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="540.3165236100854" y="49" fill="#4db8ff" font-size="12" font-family="monospace">851.04K ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">compute call: @computed method (cold)</text><rect x="200" y="64" width="32.574318665489564" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="238.57431866548956" y="79" fill="#f5a623" font-size="12" font-family="monospace">82.92K ops/s</text></svg></div><table>
+        <td class="dur">±2.96%</td>
+        <td>1,055</td>
+      </tr></table><h2>RPC round-trip (linked transport)</h2><div class="chart-container"><svg width="800" height="114" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">regular call: add(a, b)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">1.39M ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">compute call: @computed method (hot)</text><rect x="200" y="34" width="293.5324640225985" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="499.5324640225985" y="49" fill="#4db8ff" font-size="12" font-family="monospace">786.90K ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">compute call: @computed method (cold)</text><rect x="200" y="64" width="29.329428111042624" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="235.32942811104263" y="79" fill="#f5a623" font-size="12" font-family="monospace">78.63K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>regular call: add(a, b)</td>
-        <td style="color:#16c79a">1.32M</td>
+        <td style="color:#16c79a">1.39M</td>
         <td class="dur">1µs</td>
         <td class="dur">0µs</td>
-        <td class="dur">1.4ms</td>
+        <td class="dur">1.6ms</td>
         <td class="dur">1µs</td>
-        <td class="dur">2µs</td>
+        <td class="dur">1µs</td>
         <td class="dur">4µs</td>
-        <td class="dur">±1.09%</td>
-        <td>661,859</td>
+        <td class="dur">±1.15%</td>
+        <td>697,002</td>
       </tr><tr>
         <td>compute call: @computed method (hot)</td>
-        <td style="color:#4db8ff">851.04K</td>
+        <td style="color:#4db8ff">786.90K</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">421µs</td>
+        <td class="dur">4.3ms</td>
         <td class="dur">1µs</td>
-        <td class="dur">2µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">±1.02%</td>
-        <td>425,520</td>
+        <td class="dur">4µs</td>
+        <td class="dur">±2.00%</td>
+        <td>393,448</td>
       </tr><tr>
         <td>compute call: @computed method (cold)</td>
-        <td style="color:#f5a623">82.92K</td>
-        <td class="dur">12µs</td>
+        <td style="color:#f5a623">78.63K</td>
+        <td class="dur">13µs</td>
         <td class="dur">7µs</td>
-        <td class="dur">3.1ms</td>
-        <td class="dur">10µs</td>
-        <td class="dur">17µs</td>
-        <td class="dur">1.6ms</td>
-        <td class="dur">±5.14%</td>
-        <td>41,472</td>
-      </tr></table><h2>RPC payload size</h2><div class="chart-container"><svg width="800" height="114" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">small payload (number)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">735.38K ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">medium payload (object)</text><rect x="200" y="34" width="483.8375691580317" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="689.8375691580318" y="49" fill="#4db8ff" font-size="12" font-family="monospace">684.24K ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">large payload (100-element array)</text><rect x="200" y="64" width="128.87597803525892" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="334.8759780352589" y="79" fill="#f5a623" font-size="12" font-family="monospace">182.26K ops/s</text></svg></div><table>
+        <td class="dur">2.8ms</td>
+        <td class="dur">11µs</td>
+        <td class="dur">44µs</td>
+        <td class="dur">1.8ms</td>
+        <td class="dur">±5.42%</td>
+        <td>39,313</td>
+      </tr></table><h2>RPC payload size</h2><div class="chart-container"><svg width="800" height="114" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">small payload (number)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">758.45K ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">medium payload (object)</text><rect x="200" y="34" width="498.75655421912023" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="704.7565542191203" y="49" fill="#4db8ff" font-size="12" font-family="monospace">727.47K ops/s</text><text x="192" y="79" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">large payload (100-element array)</text><rect x="200" y="64" width="123.3656913349112" height="22" rx="3" fill="#f5a623" opacity="0.85"/><text x="329.3656913349112" y="79" fill="#f5a623" font-size="12" font-family="monospace">179.94K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>small payload (number)</td>
-        <td style="color:#16c79a">735.38K</td>
+        <td style="color:#16c79a">758.45K</td>
         <td class="dur">1µs</td>
         <td class="dur">1µs</td>
-        <td class="dur">480µs</td>
+        <td class="dur">474µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">3µs</td>
+        <td class="dur">6µs</td>
+        <td class="dur">±1.18%</td>
+        <td>379,226</td>
+      </tr><tr>
+        <td>medium payload (object)</td>
+        <td style="color:#4db8ff">727.47K</td>
+        <td class="dur">1µs</td>
+        <td class="dur">1µs</td>
+        <td class="dur">543µs</td>
         <td class="dur">1µs</td>
         <td class="dur">2µs</td>
         <td class="dur">6µs</td>
-        <td class="dur">±1.32%</td>
-        <td>367,690</td>
-      </tr><tr>
-        <td>medium payload (object)</td>
-        <td style="color:#4db8ff">684.24K</td>
-        <td class="dur">1µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">623µs</td>
-        <td class="dur">1µs</td>
-        <td class="dur">3µs</td>
-        <td class="dur">6µs</td>
-        <td class="dur">±1.32%</td>
-        <td>342,119</td>
+        <td class="dur">±1.39%</td>
+        <td>363,734</td>
       </tr><tr>
         <td>large payload (100-element array)</td>
-        <td style="color:#f5a623">182.26K</td>
+        <td style="color:#f5a623">179.94K</td>
+        <td class="dur">6µs</td>
         <td class="dur">5µs</td>
+        <td class="dur">660µs</td>
         <td class="dur">5µs</td>
-        <td class="dur">666µs</td>
-        <td class="dur">5µs</td>
-        <td class="dur">8µs</td>
-        <td class="dur">22µs</td>
-        <td class="dur">±1.56%</td>
-        <td>91,128</td>
-      </tr></table><h2>RPC invalidation + re-fetch (linked transport)</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">echo (1KB string)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">282.46K ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">invalidate → re-fetch single value</text><rect x="200" y="34" width="160.43025426110646" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="366.4302542611065" y="49" fill="#4db8ff" font-size="12" font-family="monospace">87.15K ops/s</text></svg></div><table>
+        <td class="dur">7µs</td>
+        <td class="dur">21µs</td>
+        <td class="dur">±1.46%</td>
+        <td>89,969</td>
+      </tr></table><h2>RPC invalidation + re-fetch (linked transport)</h2><div class="chart-container"><svg width="800" height="84" xmlns="http://www.w3.org/2000/svg"><text x="192" y="19" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">echo (1KB string)</text><rect x="200" y="4" width="520" height="22" rx="3" fill="#16c79a" opacity="0.85"/><text x="726" y="19" fill="#16c79a" font-size="12" font-family="monospace">277.88K ops/s</text><text x="192" y="49" fill="#e0e0e0" font-size="12" font-family="monospace" text-anchor="end">invalidate → re-fetch single value</text><rect x="200" y="34" width="157.61180991282913" height="22" rx="3" fill="#4db8ff" opacity="0.85"/><text x="363.61180991282913" y="49" fill="#4db8ff" font-size="12" font-family="monospace">84.23K ops/s</text></svg></div><table>
       <tr><th>Name</th><th>ops/sec</th><th>Mean</th><th>Min</th><th>Max</th><th>p75</th><th>p99</th><th>p999</th><th>RME</th><th>Samples</th></tr><tr>
         <td>echo (1KB string)</td>
-        <td style="color:#16c79a">282.46K</td>
+        <td style="color:#16c79a">277.88K</td>
         <td class="dur">4µs</td>
         <td class="dur">3µs</td>
-        <td class="dur">279µs</td>
+        <td class="dur">304µs</td>
         <td class="dur">4µs</td>
         <td class="dur">4µs</td>
-        <td class="dur">6µs</td>
-        <td class="dur">±0.60%</td>
-        <td>141,233</td>
+        <td class="dur">7µs</td>
+        <td class="dur">±0.63%</td>
+        <td>138,941</td>
       </tr><tr>
         <td>invalidate → re-fetch single value</td>
-        <td style="color:#4db8ff">87.15K</td>
-        <td class="dur">11µs</td>
+        <td style="color:#4db8ff">84.23K</td>
+        <td class="dur">12µs</td>
         <td class="dur">8µs</td>
-        <td class="dur">1.9ms</td>
-        <td class="dur">11µs</td>
-        <td class="dur">21µs</td>
-        <td class="dur">924µs</td>
-        <td class="dur">±2.99%</td>
-        <td>43,573</td>
+        <td class="dur">3.1ms</td>
+        <td class="dur">12µs</td>
+        <td class="dur">20µs</td>
+        <td class="dur">862µs</td>
+        <td class="dur">±3.09%</td>
+        <td>42,113</td>
       </tr></table>
-<div class="generated">Generated 2026-03-01T18:34:09.861Z</div>
+<div class="generated">Generated 2026-03-01T18:51:41.974Z</div>
 </body></html>
