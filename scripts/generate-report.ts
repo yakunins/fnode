@@ -145,6 +145,63 @@ function generateTestReport() {
   const out = html("FNode — Test Report", body);
   writeFileSync(join(reportsDir, "test-report.html"), out);
   console.log("✓ Generated .reports/test-report.html");
+
+  generateTestMarkdown(data, suites, passed, failed, pending, total, duration);
+}
+
+function generateTestMarkdown(
+  data: any,
+  suites: any[],
+  passed: number,
+  failed: number,
+  pending: number,
+  total: number,
+  duration: number,
+) {
+  const date = new Date().toISOString().slice(0, 10);
+  const lines: string[] = [];
+  const ln = (s = "") => lines.push(s);
+
+  ln(`# FNode — Test Report`);
+  ln();
+  ln(`**Runtime**: Bun on ${process.platform} (${process.arch})`);
+  ln(`**Test runner**: Vitest`);
+  ln(`**Generated**: ${date}`);
+  ln();
+  ln(`| Passed | Failed | Skipped | Total | Suites | Duration |`);
+  ln(`|---:|---:|---:|---:|---:|---:|`);
+  ln(`| ${passed} | ${failed} | ${pending} | ${total} | ${data.numTotalTestSuites ?? 0} | ${fmtDur(duration)} |`);
+  ln();
+  ln(`---`);
+
+  for (const suite of suites) {
+    const name = suiteName(suite.name);
+    const sDur = suite.endTime - suite.startTime;
+    const status = suite.status ?? "passed";
+    const tests: any[] = suite.assertionResults ?? [];
+
+    ln();
+    ln(`## ${name}`);
+    ln();
+    ln(`**${status}** — ${fmtDur(sDur)}`);
+    ln();
+    ln(`| Status | Test | Duration |`);
+    ln(`|---|---|---:|`);
+
+    for (const t of tests) {
+      const tStatus = t.status ?? "passed";
+      const icon = tStatus === "passed" ? "PASS" : tStatus === "failed" ? "FAIL" : "SKIP";
+      ln(`| ${icon} | ${t.title} | ${fmtDur(t.duration ?? 0)} |`);
+    }
+  }
+
+  ln();
+  ln(`---`);
+  ln();
+  ln(`*Generated ${new Date().toISOString()}*`);
+
+  writeFileSync(join(reportsDir, "test-report.md"), lines.join("\n"));
+  console.log("✓ Generated .reports/test-report.md");
 }
 
 // ── Bench Report ───────────────────────────────────────────────
