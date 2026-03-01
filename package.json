@@ -1,0 +1,28 @@
+{
+  "name": "fnode",
+  "private": true,
+  "license": "Apache-2.0",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "bench": "vitest bench",
+    "build": "tsc --build",
+    "typecheck": "tsc --build --noEmit",
+    "test:report": "bash scripts/run-tests.sh",
+    "bench:report": "bash scripts/run-bench.sh",
+    "report:test": "bun run scripts/generate-report.ts test",
+    "report:bench": "bun run scripts/generate-report.ts bench"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.2",
+    "@types/react-dom": "^19.2.3",
+    "@vitest/coverage-v8": "^4.0.18",
+    "bun-types": "^1.3.10",
+    "happy-dom": "^20.7.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "typescript": "^5.7.0",
+    "vitest": "^4.0.18"
+  }
+}
