@@ -17,38 +17,38 @@
       },
     },
     "packages/auth": {
-      "name": "@fnode/auth",
+      "name": "@fnodejs/auth",
       "version": "0.0.1",
       "dependencies": {
-        "@fnode/commandr": "workspace:*",
-        "@fnode/core": "workspace:*",
-        "@fnode/fusion": "workspace:*",
+        "@fnodejs/commandr": "workspace:*",
+        "@fnodejs/core": "workspace:*",
+        "@fnodejs/fusion": "workspace:*",
       },
     },
     "packages/commandr": {
-      "name": "@fnode/commandr",
+      "name": "@fnodejs/commandr",
       "version": "0.0.1",
       "dependencies": {
-        "@fnode/core": "workspace:*",
-        "@fnode/fusion": "workspace:*",
+        "@fnodejs/core": "workspace:*",
+        "@fnodejs/fusion": "workspace:*",
       },
     },
     "packages/core": {
-      "name": "@fnode/core",
+      "name": "@fnodejs/core",
       "version": "0.0.1",
     },
     "packages/fusion": {
-      "name": "@fnode/fusion",
+      "name": "@fnodejs/fusion",
       "version": "0.0.1",
       "dependencies": {
-        "@fnode/core": "workspace:*",
+        "@fnodejs/core": "workspace:*",
       },
     },
     "packages/react": {
-      "name": "@fnode/react",
+      "name": "@fnodejs/react",
       "version": "0.0.1",
       "dependencies": {
-        "@fnode/fusion": "workspace:*",
+        "@fnodejs/fusion": "workspace:*",
       },
       "devDependencies": {
         "@types/react": "^19.0.0",
@@ -58,11 +58,11 @@
       },
     },
     "packages/rpc": {
-      "name": "@fnode/rpc",
+      "name": "@fnodejs/rpc",
       "version": "0.0.1",
       "dependencies": {
-        "@fnode/core": "workspace:*",
-        "@fnode/fusion": "workspace:*",
+        "@fnodejs/core": "workspace:*",
+        "@fnodejs/fusion": "workspace:*",
       },
     },
   },
@@ -133,17 +133,17 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.27.3", "", { "os": "win32", "cpu": "x64" }, "sha512-4uJGhsxuptu3OcpVAzli+/gWusVGwZZHTlS63hh++ehExkVT8SgiEf7/uC/PclrPPkLhZqGgCTjd0VWLo6xMqA=="],
 
-    "@fnode/auth": ["@fnode/auth@workspace:packages/auth"],
+    "@fnodejs/auth": ["@fnodejs/auth@workspace:packages/auth"],
 
-    "@fnode/commandr": ["@fnode/commandr@workspace:packages/commandr"],
+    "@fnodejs/commandr": ["@fnodejs/commandr@workspace:packages/commandr"],
 
-    "@fnode/core": ["@fnode/core@workspace:packages/core"],
+    "@fnodejs/core": ["@fnodejs/core@workspace:packages/core"],
 
-    "@fnode/fusion": ["@fnode/fusion@workspace:packages/fusion"],
+    "@fnodejs/fusion": ["@fnodejs/fusion@workspace:packages/fusion"],
 
-    "@fnode/react": ["@fnode/react@workspace:packages/react"],
+    "@fnodejs/react": ["@fnodejs/react@workspace:packages/react"],
 
-    "@fnode/rpc": ["@fnode/rpc@workspace:packages/rpc"],
+    "@fnodejs/rpc": ["@fnodejs/rpc@workspace:packages/rpc"],
 
     "@jridgewell/resolve-uri": ["@jridgewell/resolve-uri@3.1.2", "", {}, "sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw=="],
 

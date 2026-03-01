@@ -7,7 +7,7 @@ import {
   ComputedRegistry,
   Invalidation,
   capture,
-} from "@fnode/fusion";
+} from "@fnodejs/fusion";
 import { RpcServiceRegistry } from "../src/service-registry.js";
 import { startRpcServer, type RpcServer } from "../src/server/ws-server.js";
 import { RpcClient } from "../src/client/rpc-client.js";

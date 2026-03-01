@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { computed, ComputedRegistry } from "@fnode/fusion";
+import { computed, ComputedRegistry } from "@fnodejs/fusion";
 import { RpcServiceRegistry } from "../src/service-registry.js";
 
 beforeEach(() => {

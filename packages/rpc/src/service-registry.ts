@@ -4,7 +4,7 @@
  * Scans service instances for @computed methods using the COMPUTED_METHOD symbol.
  */
 
-import { COMPUTED_METHOD } from "@fnode/fusion";
+import { COMPUTED_METHOD } from "@fnodejs/fusion";
 
 export interface RpcMethodDef {
   readonly service: string;

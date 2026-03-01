@@ -4,7 +4,7 @@ import { describe, it, expect, beforeEach, vi } from "vitest";
 import { render, screen, act, cleanup } from "@testing-library/react";
 import React from "react";
 import { useComputed } from "../src/use-computed.js";
-import { ComputedRegistry, Invalidation, computed } from "@fnode/fusion";
+import { ComputedRegistry, Invalidation, computed } from "@fnodejs/fusion";
 
 const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));
 

@@ -1,4 +1,4 @@
-// @fnode/rpc server-side API
+// @fnodejs/rpc server-side API
 export {
   type RpcDispatcher,
   createDispatcher,

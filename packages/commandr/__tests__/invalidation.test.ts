@@ -5,7 +5,7 @@ import {
   ComputedRegistry,
   ComputedState,
   capture,
-} from "@fnode/fusion";
+} from "@fnodejs/fusion";
 import { Commander, commandHandler, CommandContext } from "../src/index.js";
 
 beforeEach(() => {

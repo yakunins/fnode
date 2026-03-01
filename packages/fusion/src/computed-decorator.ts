@@ -8,7 +8,7 @@
  * - In invalidation scope → find cached value and invalidate it
  */
 
-import { ComputedInput, Result } from "@fnode/core";
+import { ComputedInput, Result } from "@fnodejs/core";
 import { Computed, type ComputedOptions } from "./computed.js";
 import { ComputeContext } from "./compute-context.js";
 import { ComputedRegistry } from "./computed-registry.js";

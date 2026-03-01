@@ -7,7 +7,7 @@
  * Mirrors ActualLab.Fusion.Authentication.IAuth.
  */
 
-import { computed } from "@fnode/fusion";
+import { computed } from "@fnodejs/fusion";
 import type { Session } from "./session.js";
 import type { User } from "./user.js";
 

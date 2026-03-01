@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { ComputedRegistry } from "@fnode/fusion";
+import { ComputedRegistry } from "@fnodejs/fusion";
 import { RpcPeer } from "../src/peer.js";
 import { createLinkedTransports } from "../src/transport.js";
 import { createDispatcher } from "../src/server/dispatch.js";

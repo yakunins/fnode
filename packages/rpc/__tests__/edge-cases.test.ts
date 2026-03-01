@@ -12,7 +12,7 @@ import {
   ComputedRegistry,
   Invalidation,
   capture,
-} from "@fnode/fusion";
+} from "@fnodejs/fusion";
 import { RpcPeer } from "../src/peer.js";
 import { createLinkedTransports } from "../src/transport.js";
 import { createDispatcher } from "../src/server/dispatch.js";

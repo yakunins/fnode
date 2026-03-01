@@ -4,7 +4,7 @@
  * Accepts WebSocket connections and creates an RpcPeer per connection.
  */
 
-import { TypedEvent } from "@fnode/core";
+import { TypedEvent } from "@fnodejs/core";
 import { JsonRpcSerializer, type RpcSerializer } from "../serializer.js";
 import { RpcPeer } from "../peer.js";
 import type { RpcServiceRegistry } from "../service-registry.js";

@@ -7,7 +7,7 @@
  * - This is what makes "write command handler once, get invalidation for free" work
  */
 
-import { Invalidation } from "@fnode/fusion";
+import { Invalidation } from "@fnodejs/fusion";
 import type { CommandMiddleware } from "./command-handler.js";
 
 /** Default priority for the invalidation middleware. */

@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { ComputedRegistry } from "@fnode/fusion";
+import { ComputedRegistry } from "@fnodejs/fusion";
 import { RpcMessageType, type RpcMessage } from "../src/protocol.js";
 import { createLinkedTransports, type RpcTransport } from "../src/transport.js";
 import { ReconnectingTransport } from "../src/client/reconnect.js";

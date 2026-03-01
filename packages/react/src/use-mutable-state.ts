@@ -6,7 +6,7 @@
  */
 
 import { useMemo, useState, useEffect, useCallback } from "react";
-import { MutableState } from "@fnode/fusion";
+import { MutableState } from "@fnodejs/fusion";
 
 export function useMutableState<T>(
   initialValue: T

@@ -1,5 +1,5 @@
 {
-  "name": "@fnode/rpc",
+  "name": "@fnodejs/rpc",
   "version": "0.0.1",
   "license": "Apache-2.0",
   "type": "module",
@@ -26,8 +26,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@fnode/core": "workspace:*",
-    "@fnode/fusion": "workspace:*"
+    "@fnodejs/core": "workspace:*",
+    "@fnodejs/fusion": "workspace:*"
   },
   "devDependencies": {}
 }

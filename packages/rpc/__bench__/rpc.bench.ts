@@ -1,5 +1,5 @@
 import { describe, bench, beforeEach } from "vitest";
-import { computed, ComputedRegistry, Invalidation } from "@fnode/fusion";
+import { computed, ComputedRegistry, Invalidation } from "@fnodejs/fusion";
 import { RpcPeer } from "../src/peer.js";
 import { createLinkedTransports } from "../src/transport.js";
 import { createDispatcher } from "../src/server/dispatch.js";

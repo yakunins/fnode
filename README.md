@@ -2,7 +2,7 @@
 
 Distributed reactive memoization for Node.js/TypeScript/Bun.
 
-Decorate a method with `@computed` and FNode automatically tracks its dependencies, caches the result, and invalidates it transitively when upstream data changes. Add `@commandHandler` for structured mutations with automatic invalidation. Add `@fnode/rpc` to distribute services over WebSocket — client code stays identical. Add `@fnode/react` to bind computed values to React components that auto-re-render.
+Decorate a method with `@computed` and FNode automatically tracks its dependencies, caches the result, and invalidates it transitively when upstream data changes. Add `@commandHandler` for structured mutations with automatic invalidation. Add `@fnodejs/rpc` to distribute services over WebSocket — client code stays identical. Add `@fnodejs/react` to bind computed values to React components that auto-re-render.
 
 ```typescript
 class CartService {
@@ -26,16 +26,16 @@ class CartService {
 
 FNode is a Bun workspaces monorepo. Each package is independently usable — pick only what you need.
 
-### @fnode/core
+### @fnodejs/core
 
 Minimal async utilities: `Result<T>`, `AsyncLock`, `AsyncLockSet<K>`, `TypedEvent<T>`, `ComputedInput`, `VersionGenerator`. No dependencies.
 
-### @fnode/fusion
+### @fnodejs/fusion
 
 The engine. `@computed` decorator for memoization + dependency tracking, `Computed<T>` cache entries with three-state lifecycle (Computing → Consistent → Invalidated), `ComputeContext` for async propagation, `Invalidation.begin()` for scoped invalidation, `ComputedState` and `MutableState` for observable values, `capture()` for reactive observation loops.
 
 ```typescript
-import { computed, Invalidation } from "@fnode/fusion";
+import { computed, Invalidation } from "@fnodejs/fusion";
 
 class ProductService {
   @computed()
@@ -52,12 +52,12 @@ class ProductService {
 }
 ```
 
-### @fnode/commandr
+### @fnodejs/commandr
 
 Command bus with middleware pipeline. `@commandHandler` decorator for structured mutations, `Commander` for dispatch, `CommandContext` via `AsyncLocalStorage` for cross-cutting state, built-in `InvalidationMiddleware` that auto re-invokes handlers in invalidation scope.
 
 ```typescript
-import { commandHandler, Commander } from "@fnode/commandr";
+import { commandHandler, Commander } from "@fnodejs/commandr";
 
 class EditProductCommand {
   constructor(public readonly product: Product) {}
@@ -79,30 +79,30 @@ commander.addService(productService);
 await commander.call(new EditProductCommand(product));
 ```
 
-### @fnode/rpc
+### @fnodejs/rpc
 
 WebSocket RPC transport with invalidation push. Host `@computed` services on a server, access them transparently from a client proxy. Server-side invalidation automatically pushes to connected clients.
 
 ```typescript
 // Server
-import { RpcServiceRegistry, startRpcServer } from "@fnode/rpc/server";
+import { RpcServiceRegistry, startRpcServer } from "@fnodejs/rpc/server";
 const registry = new RpcServiceRegistry();
 registry.register("product", productService);
 const server = startRpcServer({ registry, port: 3000 });
 
 // Client
-import { RpcClient } from "@fnode/rpc";
+import { RpcClient } from "@fnodejs/rpc";
 const client = await RpcClient.connect({ url: "ws://localhost:3000" });
 const remote = client.getProxy<IProductService>("product", ["get"]);
 const product = await remote.get("apple"); // transparent RPC call
 ```
 
-### @fnode/react
+### @fnodejs/react
 
 React hooks that auto-re-render when `@computed` values change.
 
 ```typescript
-import { useComputed, useComputedState } from "@fnode/react";
+import { useComputed, useComputedState } from "@fnodejs/react";
 
 function ProductPrice({ service, id }: Props) {
   const price = useComputed(() => service.get(id), [service, id]);
@@ -113,7 +113,7 @@ function ProductPrice({ service, id }: Props) {
 - `useComputed(factory, deps)` — subscribe to a `@computed` value, re-render on invalidation
 - `useComputedState(factory, deps)` — same, but also exposes `{ value, isUpdating }`
 
-### @fnode/auth
+### @fnodejs/auth
 
 Session management and user authentication as `@computed` services. `Session` (opaque token), `User` type, `AuthService` abstract class, `InMemoryAuthService` for testing, `createSessionMiddleware()` for command pipeline integration.
 

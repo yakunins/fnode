@@ -1,5 +1,5 @@
 import { describe, bench, beforeEach } from "vitest";
-import { computed, Invalidation, ComputedRegistry } from "@fnode/fusion";
+import { computed, Invalidation, ComputedRegistry } from "@fnodejs/fusion";
 import { Commander, commandHandler } from "../src/index.js";
 
 // --- Commands ---

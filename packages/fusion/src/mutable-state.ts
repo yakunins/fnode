@@ -8,7 +8,7 @@
  * - Same event surface as ComputedState
  */
 
-import { TypedEvent, ComputedInput, Result } from "@fnode/core";
+import { TypedEvent, ComputedInput, Result } from "@fnodejs/core";
 import { Computed } from "./computed.js";
 import { ComputeContext } from "./compute-context.js";
 import { StateSnapshot } from "./state-snapshot.js";

@@ -5,8 +5,8 @@
  */
 
 import { useMemo, useState, useEffect } from "react";
-import { ComputedState, type ComputedStateOptions } from "@fnode/fusion";
-import { FixedDelayer } from "@fnode/fusion";
+import { ComputedState, type ComputedStateOptions } from "@fnodejs/fusion";
+import { FixedDelayer } from "@fnodejs/fusion";
 
 export interface UseComputedStateOptions {
   updateDelayMs?: number;

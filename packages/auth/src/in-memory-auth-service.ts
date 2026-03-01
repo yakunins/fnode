@@ -4,7 +4,7 @@
  * Useful for testing and samples that don't need DB persistence.
  */
 
-import { Invalidation } from "@fnode/fusion";
+import { Invalidation } from "@fnodejs/fusion";
 import { Session } from "./session.js";
 import type { User } from "./user.js";
 import { AuthService } from "./auth-service.js";

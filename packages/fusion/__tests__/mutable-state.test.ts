@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { Result } from "@fnode/core";
+import { Result } from "@fnodejs/core";
 import { ComputedRegistry, computed, Invalidation } from "../src/index.js";
 import { MutableState } from "../src/mutable-state.js";
 import { ComputedState } from "../src/computed-state.js";

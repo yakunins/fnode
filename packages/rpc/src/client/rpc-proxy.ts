@@ -10,8 +10,8 @@
  * - Simply calls peer.call() and returns the result
  */
 
-import { ComputedInput, Result } from "@fnode/core";
-import { Computed, ComputeContext, ComputedRegistry } from "@fnode/fusion";
+import { ComputedInput, Result } from "@fnodejs/core";
+import { Computed, ComputeContext, ComputedRegistry } from "@fnodejs/fusion";
 import type { RpcPeer } from "../peer.js";
 
 /**

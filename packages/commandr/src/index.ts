@@ -1,4 +1,4 @@
-// @fnode/commandr — Command bus + handlers with middleware pipeline
+// @fnodejs/commandr — Command bus + handlers with middleware pipeline
 // Automatic invalidation of @computed caches after command execution
 
 export {

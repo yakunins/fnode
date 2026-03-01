@@ -7,7 +7,7 @@
  * 3. Re-fires pending invalidation subscriptions
  */
 
-import { TypedEvent } from "@fnode/core";
+import { TypedEvent } from "@fnodejs/core";
 import type { RpcMessage } from "../protocol.js";
 import type { RpcTransport } from "../transport.js";
 

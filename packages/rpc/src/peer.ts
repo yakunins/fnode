@@ -5,7 +5,7 @@
  * For server-side dispatch, delegates to RpcDispatcher.
  */
 
-import { TypedEvent } from "@fnode/core";
+import { TypedEvent } from "@fnodejs/core";
 import {
   RpcMessageType,
   type RpcMessage,

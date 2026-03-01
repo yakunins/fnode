@@ -2,7 +2,7 @@
  * Server-side WebSocket transport — wraps Bun ServerWebSocket as RpcTransport.
  */
 
-import { TypedEvent } from "@fnode/core";
+import { TypedEvent } from "@fnodejs/core";
 import type { RpcMessage } from "../protocol.js";
 import type { RpcSerializer } from "../serializer.js";
 import type { RpcTransport } from "../transport.js";

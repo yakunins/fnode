@@ -5,7 +5,7 @@
  * their session propagated to downstream handlers via the context items bag.
  */
 
-import type { CommandMiddleware } from "@fnode/commandr";
+import type { CommandMiddleware } from "@fnodejs/commandr";
 import type { Session } from "./session.js";
 
 export const SESSION_KEY = "fnode.session";

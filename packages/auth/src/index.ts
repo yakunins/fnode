@@ -1,4 +1,4 @@
-// @fnode/auth — Session management and user auth as @computed services
+// @fnodejs/auth — Session management and user auth as @computed services
 
 export { Session } from "./session.js";
 export type { User } from "./user.js";

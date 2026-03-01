@@ -7,7 +7,7 @@
  * - Provides get/register/unregister
  */
 
-import { AsyncLockSet } from "@fnode/core";
+import { AsyncLockSet } from "@fnodejs/core";
 import type { Computed } from "./computed.js";
 
 class ComputedRegistryImpl {

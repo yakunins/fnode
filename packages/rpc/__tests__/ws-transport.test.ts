@@ -1,5 +1,5 @@
 import { describe, it, expect, afterEach, beforeEach } from "vitest";
-import { ComputedRegistry } from "@fnode/fusion";
+import { ComputedRegistry } from "@fnodejs/fusion";
 import { RpcMessageType, type RpcMessage } from "../src/protocol.js";
 import { JsonRpcSerializer } from "../src/serializer.js";
 import {

@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { ComputedInput, Result } from "@fnode/core";
+import { ComputedInput, Result } from "@fnodejs/core";
 import { Computed, ComputedRegistry } from "../src/index.js";
 
 beforeEach(() => {

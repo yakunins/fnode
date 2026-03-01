@@ -8,7 +8,7 @@
  * 4. Tracks subscription in InboundComputeCall for cleanup
  */
 
-import { capture } from "@fnode/fusion";
+import { capture } from "@fnodejs/fusion";
 import { RpcMessageType, type RpcMessage } from "../protocol.js";
 import { InboundComputeCall } from "../calls.js";
 import type { RpcServiceRegistry } from "../service-registry.js";

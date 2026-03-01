@@ -4,7 +4,7 @@ import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen, act, cleanup, fireEvent } from "@testing-library/react";
 import React from "react";
 import { useMutableState } from "../src/use-mutable-state.js";
-import { ComputedRegistry } from "@fnode/fusion";
+import { ComputedRegistry } from "@fnodejs/fusion";
 
 const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -107,7 +107,7 @@ describe("useMutableState", () => {
     // for useComputed consumers. We test the MutableState part directly here.
     const { useMutableState: useMutable } = await import("../src/use-mutable-state.js");
     const { useComputed } = await import("../src/use-computed.js");
-    const { MutableState } = await import("@fnode/fusion");
+    const { MutableState } = await import("@fnodejs/fusion");
 
     // Use a shared MutableState to verify it participates in the graph
     const shared = new MutableState(10);

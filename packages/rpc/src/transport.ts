@@ -4,7 +4,7 @@
  * Implementations: linked pair (for testing), WebSocket client/server.
  */
 
-import { TypedEvent } from "@fnode/core";
+import { TypedEvent } from "@fnodejs/core";
 import type { RpcMessage } from "./protocol.js";
 
 export interface RpcTransport extends Disposable {

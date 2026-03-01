@@ -8,7 +8,7 @@
  * - Event: onInvalidated fires once when transitioning to Invalidated
  */
 
-import { Result, TypedEvent, type ComputedInput } from "@fnode/core";
+import { Result, TypedEvent, type ComputedInput } from "@fnodejs/core";
 import { ConsistencyState } from "./consistency-state.js";
 import { ComputeContext } from "./compute-context.js";
 

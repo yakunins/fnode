@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { ComputedInput } from "@fnode/core";
+import { ComputedInput } from "@fnodejs/core";
 import { Computed, ConsistencyState, ComputedRegistry } from "../src/index.js";
-import { Result } from "@fnode/core";
+import { Result } from "@fnodejs/core";
 
 beforeEach(() => {
   ComputedRegistry.clear();

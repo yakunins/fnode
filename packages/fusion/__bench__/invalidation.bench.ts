@@ -1,5 +1,5 @@
 import { describe, bench } from "vitest";
-import { ComputedInput, Result } from "@fnode/core";
+import { ComputedInput, Result } from "@fnodejs/core";
 import { Computed } from "../src/index.js";
 
 function createConsistentComputed(
