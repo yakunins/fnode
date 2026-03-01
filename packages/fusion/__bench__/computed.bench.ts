@@ -1,4 +1,4 @@
-import { describe, bench, beforeEach } from "vitest";
+import { describe, bench } from "vitest";
 import { computed, Invalidation, ComputedRegistry } from "../src/index.js";
 
 // --- Helpers ---
@@ -74,12 +74,7 @@ class FanOutService {
 // --- Benchmarks ---
 
 describe("@computed cache hit", () => {
-  let svc: SimpleService;
-
-  beforeEach(async () => {
-    svc = new SimpleService();
-    await svc.get(); // warm cache
-  });
+  const svc = new SimpleService();
 
   bench("cached call (no args)", async () => {
     await svc.get();
@@ -98,12 +93,7 @@ describe("@computed cold compute", () => {
 });
 
 describe("invalidation", () => {
-  let svc: SimpleService;
-
-  beforeEach(async () => {
-    svc = new SimpleService();
-    await svc.get(); // warm
-  });
+  const svc = new SimpleService();
 
   bench("invalidate + recompute single", async () => {
     svc.setValue(Math.random());
@@ -112,12 +102,7 @@ describe("invalidation", () => {
 });
 
 describe("transitive invalidation chain (depth=4)", () => {
-  let chain: ChainService;
-
-  beforeEach(async () => {
-    chain = new ChainService();
-    await chain.level3(); // warm entire chain
-  });
+  const chain = new ChainService();
 
   bench("invalidate base → recompute level3", async () => {
     chain.invalidateBase();
@@ -126,15 +111,7 @@ describe("transitive invalidation chain (depth=4)", () => {
 });
 
 describe("fan-out invalidation", () => {
-  let fan: FanOutService;
-
-  beforeEach(async () => {
-    fan = new FanOutService();
-    // Warm 100 leaves that depend on root
-    for (let i = 0; i < 100; i++) {
-      await fan.leaf(i);
-    }
-  });
+  const fan = new FanOutService();
 
   bench("invalidate root → recompute 100 leaves", async () => {
     fan.invalidateRoot();
@@ -145,15 +122,7 @@ describe("fan-out invalidation", () => {
 });
 
 describe("ComputedRegistry lookup", () => {
-  let svc: SimpleService;
-
-  beforeEach(async () => {
-    svc = new SimpleService();
-    // Warm caches with many keys
-    for (let i = 0; i < 100; i++) {
-      await svc.getWithArg(`key-${i}`);
-    }
-  });
+  const svc = new SimpleService();
 
   bench("cache hit among 100 entries", async () => {
     await svc.getWithArg("key-50");

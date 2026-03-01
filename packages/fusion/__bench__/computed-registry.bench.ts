@@ -1,4 +1,4 @@
-import { describe, bench, beforeEach } from "vitest";
+import { describe, bench } from "vitest";
 import { ComputedInput, Result } from "@fnodejs/core";
 import { Computed, ComputedRegistry } from "../src/index.js";
 
@@ -19,16 +19,9 @@ function populateRegistry(size: number): Computed<number>[] {
 describe("ComputedRegistry operations", () => {
   for (const size of [100, 1000, 10000]) {
     describe(`registry size = ${size}`, () => {
-      let entries: Computed<number>[];
-      let hitKey: string;
-      let missKey: string;
-
-      beforeEach(() => {
-        ComputedRegistry.clear();
-        entries = populateRegistry(size);
-        hitKey = entries[Math.floor(size / 2)].input.key;
-        missKey = new ComputedInput(service, "missing", [999999]).key;
-      });
+      const entries = populateRegistry(size);
+      const hitKey = entries[Math.floor(size / 2)].input.key;
+      const missKey = new ComputedInput(service, "missing", [999999]).key;
 
       bench("get() hit (consistent)", () => {
         ComputedRegistry.get(hitKey);

@@ -1,4 +1,4 @@
-import { describe, bench, beforeEach } from "vitest";
+import { describe, bench } from "vitest";
 import { computed, Invalidation, ComputedRegistry } from "@fnodejs/fusion";
 import { Commander, commandHandler } from "../src/index.js";
 
@@ -50,18 +50,11 @@ class KVService {
 }
 
 describe("Commander pipeline", () => {
-  let commander: Commander;
-  let mathSvc: MathService;
-  let kvSvc: KVService;
-
-  beforeEach(() => {
-    ComputedRegistry.clear();
-    commander = new Commander();
-    mathSvc = new MathService();
-    kvSvc = new KVService();
-    commander.addService(mathSvc);
-    commander.addService(kvSvc);
-  });
+  const commander = new Commander();
+  const mathSvc = new MathService();
+  const kvSvc = new KVService();
+  commander.addService(mathSvc);
+  commander.addService(kvSvc);
 
   bench("call() — no invalidation branch", async () => {
     await commander.call<number>(new AddCommand(3, 4));
@@ -77,24 +70,19 @@ describe("Commander pipeline", () => {
 });
 
 describe("Commander nested commands", () => {
-  let commander: Commander;
+  const commander = new Commander();
 
-  beforeEach(() => {
-    ComputedRegistry.clear();
-    commander = new Commander();
-
-    class InnerService {
-      @commandHandler(AddCommand)
-      async add(cmd: AddCommand): Promise<number> {
-        return cmd.a + cmd.b;
-      }
+  class InnerService {
+    @commandHandler(AddCommand)
+    async add(cmd: AddCommand): Promise<number> {
+      return cmd.a + cmd.b;
     }
+  }
 
-    commander.addService(new InnerService());
-    commander.addHandler(OuterCommand, async (cmd) => {
-      const r = await commander.call<number>(new AddCommand(cmd.n, cmd.n));
-      return r * 2;
-    });
+  commander.addService(new InnerService());
+  commander.addHandler(OuterCommand, async (cmd) => {
+    const r = await commander.call<number>(new AddCommand(cmd.n, cmd.n));
+    return r * 2;
   });
 
   bench("nested call (2 levels)", async () => {

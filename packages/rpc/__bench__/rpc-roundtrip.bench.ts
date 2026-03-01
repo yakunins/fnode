@@ -1,4 +1,4 @@
-import { describe, bench, beforeEach } from "vitest";
+import { describe, bench } from "vitest";
 import { computed, ComputedRegistry, Invalidation } from "@fnodejs/fusion";
 import { RpcPeer } from "../src/peer.js";
 import { createLinkedTransports } from "../src/transport.js";
@@ -46,51 +46,36 @@ function setupRpc() {
 }
 
 describe("RPC round-trip (linked transport)", () => {
-  let clientPeer: RpcPeer;
-  let serverPeer: RpcPeer;
-  let proxy: { get(key: string): Promise<number> };
-
-  beforeEach(() => {
-    ComputedRegistry.clear();
-    const rpc = setupRpc();
-    clientPeer = rpc.clientPeer;
-    serverPeer = rpc.serverPeer;
-    proxy = rpc.proxy;
-  });
+  const rpc = setupRpc();
 
   bench("regular call: add(a, b)", async () => {
-    await clientPeer.call("Math", "add", [3, 7]);
+    await rpc.clientPeer.call("Math", "add", [3, 7]);
   });
 
   bench("compute call: @computed method (cold)", async () => {
     ComputedRegistry.clear();
-    await proxy.get("key-0");
+    await rpc.proxy.get("key-0");
   });
 
   bench("compute call: @computed method (hot)", async () => {
-    await proxy.get("key-0");
+    await rpc.proxy.get("key-0");
   });
 });
 
 describe("RPC payload size", () => {
-  let clientPeer: RpcPeer;
+  const [clientTransport, serverTransport] = createLinkedTransports();
+  const registry = new RpcServiceRegistry();
 
-  beforeEach(() => {
-    ComputedRegistry.clear();
-    const [clientTransport, serverTransport] = createLinkedTransports();
-    const registry = new RpcServiceRegistry();
-
-    class PayloadService {
-      async echo(data: unknown): Promise<unknown> {
-        return data;
-      }
+  class PayloadService {
+    async echo(data: unknown): Promise<unknown> {
+      return data;
     }
+  }
 
-    registry.register("Payload", new PayloadService());
-    const dispatcher = createDispatcher(registry);
-    new RpcPeer({ transport: serverTransport, dispatcher });
-    clientPeer = new RpcPeer({ transport: clientTransport });
-  });
+  registry.register("Payload", new PayloadService());
+  const dispatcher = createDispatcher(registry);
+  new RpcPeer({ transport: serverTransport, dispatcher });
+  const clientPeer = new RpcPeer({ transport: clientTransport });
 
   bench("small payload (number)", async () => {
     await clientPeer.call("Payload", "echo", [42]);

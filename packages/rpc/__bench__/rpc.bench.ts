@@ -1,4 +1,4 @@
-import { describe, bench, beforeEach } from "vitest";
+import { describe, bench } from "vitest";
 import { computed, ComputedRegistry, Invalidation } from "@fnodejs/fusion";
 import { RpcPeer } from "../src/peer.js";
 import { createLinkedTransports } from "../src/transport.js";
@@ -47,24 +47,14 @@ function setupRpc() {
 // --- Benchmarks ---
 
 describe("RPC invalidation + re-fetch (linked transport)", () => {
-  let service: BenchService;
-  let proxy: { getValue(): Promise<number>; echo(s: string): Promise<string> };
-
-  beforeEach(async () => {
-    ComputedRegistry.clear();
-    const rpc = setupRpc();
-    service = rpc.service;
-    proxy = rpc.proxy;
-    // Warm cache
-    await proxy.getValue();
-  });
+  const rpc = setupRpc();
 
   bench("invalidate → re-fetch single value", async () => {
-    service.increment();
-    await proxy.getValue();
+    rpc.service.increment();
+    await rpc.proxy.getValue();
   });
 
   bench("echo (1KB string)", async () => {
-    await proxy.echo("x".repeat(1024));
+    await rpc.proxy.echo("x".repeat(1024));
   });
 });
