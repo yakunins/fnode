@@ -17,6 +17,8 @@ let nextVersion = 1;
 export interface ComputedOptions {
   /** Auto-invalidate after this many ms. 0 = disabled. */
   autoInvalidateMs?: number;
+  /** Cache hits return T directly (not Promise<T>). Default: false. */
+  sync?: boolean;
 }
 
 export class Computed<T> {
@@ -31,11 +33,12 @@ export class Computed<T> {
   /** What this computed depends on. */
   readonly #dependencies = new Set<Computed<unknown>>();
   /** What depends on this computed. */
-  readonly #dependants = new Set<Computed<unknown>>();
+  #dependants = new Set<Computed<unknown>>();
 
   readonly #onInvalidated = new TypedEvent<Computed<T>>();
 
   #autoInvalidateTimer: ReturnType<typeof setTimeout> | undefined;
+  #invalidateCallback: (() => void) | undefined;
 
   constructor(input: ComputedInput, options: ComputedOptions = {}) {
     this.input = input;
@@ -71,6 +74,10 @@ export class Computed<T> {
 
   get onInvalidated(): TypedEvent<Computed<T>> {
     return this.#onInvalidated;
+  }
+
+  setInvalidateCallback(cb: () => void): void {
+    this.#invalidateCallback = cb;
   }
 
   // --- Dependencies ---
@@ -145,19 +152,30 @@ export class Computed<T> {
       this.#autoInvalidateTimer = undefined;
     }
 
-    this.#onInvalidated.fire(this);
-    this.#onInvalidated.clear();
+    // Direct callback (registry unregister) — no event overhead
+    const cb = this.#invalidateCallback;
+    if (cb) {
+      this.#invalidateCallback = undefined;
+      cb();
+    }
 
     for (const dep of this.#dependencies) {
       dep.#dependants.delete(this);
     }
     this.#dependencies.clear();
 
-    const dependants = [...this.#dependants];
-    this.#dependants.clear();
-    for (const dependant of dependants) {
-      dependant.invalidate();
+    // Cascade to dependants (swap set to avoid array spread)
+    if (this.#dependants.size > 0) {
+      const deps = this.#dependants;
+      this.#dependants = new Set();
+      for (const dep of deps) {
+        dep.invalidate();
+      }
     }
+
+    // Fire event AFTER cascade — for external subscribers
+    this.#onInvalidated.fire(this);
+    this.#onInvalidated.clear();
   }
 
   /**
@@ -181,9 +199,12 @@ export class Computed<T> {
       this.#autoInvalidateTimer = undefined;
     }
 
-    // Fire event
-    this.#onInvalidated.fire(this);
-    this.#onInvalidated.clear();
+    // Direct callback (registry unregister) — no event overhead
+    const cb = this.#invalidateCallback;
+    if (cb) {
+      this.#invalidateCallback = undefined;
+      cb();
+    }
 
     // Remove self from all dependencies' dependant lists
     for (const dep of this.#dependencies) {
@@ -191,12 +212,18 @@ export class Computed<T> {
     }
     this.#dependencies.clear();
 
-    // Cascade: invalidate all dependants
-    const dependants = [...this.#dependants];
-    this.#dependants.clear();
-    for (const dependant of dependants) {
-      dependant.invalidate();
+    // Cascade to dependants (swap set to avoid array spread)
+    if (this.#dependants.size > 0) {
+      const deps = this.#dependants;
+      this.#dependants = new Set();
+      for (const dep of deps) {
+        dep.invalidate();
+      }
     }
+
+    // Fire event AFTER cascade — for external subscribers
+    this.#onInvalidated.fire(this);
+    this.#onInvalidated.clear();
   }
 
   // --- Use in computation context ---

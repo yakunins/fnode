@@ -1,6 +1,8 @@
 # FNode vs Fusion (.NET) — Performance Estimates
 
-Estimates based on runtime characteristics of Bun/V8 vs .NET 10. These are projections, not benchmarks — actual numbers will be validated in Phase 1.
+Estimates based on runtime characteristics of Bun/V8 vs .NET 10. These are projections, not benchmarks.
+
+> **See `performance-comparison.md` for actual measured results.** After optimization (FNV-1a hash, direct invalidation callbacks, sync fast path), FNode achieves ~0.71 μs zero-arg / ~0.91 μs object-arg cached calls, and 283 μs fan-out 1→1,000 invalidation.
 
 ---
 

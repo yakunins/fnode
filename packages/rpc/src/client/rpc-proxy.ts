@@ -114,7 +114,7 @@ async function handleComputeCall(
 
   // Register in global cache
   ComputedRegistry.register(comp);
-  comp.onInvalidated.once(() => {
+  comp.setInvalidateCallback(() => {
     ComputedRegistry.unregister(comp);
   });
 

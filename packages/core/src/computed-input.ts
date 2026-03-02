@@ -7,6 +7,17 @@
  * - Used as the key in ComputedRegistry
  */
 
+const FNV_OFFSET = 0x811c9a5d;
+const FNV_PRIME = 0x01000193;
+
+function fnv1aStr(str: string, hash: number = FNV_OFFSET): number {
+  for (let i = 0; i < str.length; i++) {
+    hash ^= str.charCodeAt(i);
+    hash = (hash * FNV_PRIME) >>> 0;
+  }
+  return hash;
+}
+
 export class ComputedInput {
   readonly service: object;
   readonly method: string;
@@ -67,9 +78,26 @@ export class ComputedInput {
       case "boolean":
       case "bigint":
         return String(arg);
-      case "object":
-        // Stable key: sorted keys → JSON
-        return JSON.stringify(arg, Object.keys(arg as object).sort());
+      case "object": {
+        if (Array.isArray(arg)) {
+          let h = FNV_OFFSET;
+          h = fnv1aStr("[", h);
+          for (let i = 0; i < arg.length; i++) {
+            if (i > 0) h = fnv1aStr(",", h);
+            h = fnv1aStr(ComputedInput.hashArg(arg[i]), h);
+          }
+          return h.toString(36);
+        }
+        const keys = Object.keys(arg as object).sort();
+        let h = FNV_OFFSET;
+        for (const k of keys) {
+          h = fnv1aStr(k, h);
+          h = fnv1aStr(":", h);
+          h = fnv1aStr(ComputedInput.hashArg((arg as Record<string, unknown>)[k]), h);
+          h = fnv1aStr("|", h);
+        }
+        return h.toString(36);
+      }
       default:
         return String(arg);
     }

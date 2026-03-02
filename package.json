@@ -9,10 +9,11 @@
     "bench": "vitest bench",
     "build": "tsc --build",
     "typecheck": "tsc --build --noEmit",
-    "test:report": "bash scripts/run-tests.sh",
-    "bench:report": "bash scripts/run-bench.sh",
-    "report:test": "bun run scripts/generate-report.ts test",
-    "report:bench": "bun run scripts/generate-report.ts bench"
+    "test:run": "bash scripts/run-tests.sh",
+    "bench:run": "bash scripts/run-bench.sh",
+    "test:report": "bun run scripts/generate-report.ts test",
+    "bench:report": "bun run scripts/generate-report.ts bench",
+    "report": "bun run test:run && bun run bench:run && bun run test:report && bun run bench:report"
   },
   "devDependencies": {
     "@testing-library/react": "^16.3.2",
